@@ -38,16 +38,16 @@
         max-width: 30%;
     }
 
-    border: 2px solid rgb(244, 244, 255);
-    background-color: #b7b6af;
+    border: 2px solid $color__cours__bordure;
+    background-color: $color__cours__background;
 }
 
 .cours__carte:nth-of-type(even){
-    background-color: #cecdc5;
+    background-color: $color__cours__background-pair;
 }
 
 .cours__carte:hover{
-    box-shadow: 5px 10px 15px rgba(233, 233, 233, 0.6);
+    box-shadow: 5px 10px 15px $color__cours__shadow;
     border-radius: 0px;
     transition: 0.5s;
 }
