@@ -552,7 +552,7 @@ COMPOSANTS
 LAYOUT
 --------------------------------------------------------- */
 .site {
-  background-color: #171716;
+  background-color: #fff;
   font-family: arial;
   color: white;
   display: grid;
@@ -571,21 +571,21 @@ LAYOUT
 /* fin @media tablette */
 .site__header {
   grid-area: header;
-  background-color: #831212;
+  background-color: #ab2121;
 }
 
 .site__footer {
   grid-area: footer;
-  background-color: #333;
+  background-color: #151515;
 }
 
 .site__main {
   grid-area: main;
-  background-color: #ccc;
+  background-color: #aaaaaa;
 }
 
 .site__barre {
   grid-area: sidebar;
-  background-color: red;
+  background-color: #c88687;
 }
 /*# sourceMappingURL=style.css.map */
