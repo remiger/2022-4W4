@@ -1,4 +1,5 @@
 a {
+	font-size: clamp(0.5rem, 2vw, 1.2rem);
 	color: $color__link;
 
 	&:visited {

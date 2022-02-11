@@ -13,24 +13,25 @@
         display: flex;
         align-items: center;
         h1{
-            padding: 0 clamp(1rem, 2vw, 7rem) 0 0;
-            font-size: clamp(1.5rem, 4vw, 6rem);
+            padding: 0 clamp(0.7rem, 2vw, 7rem) 0 0;
+            font-size: clamp(1.2rem, 4vw, 4rem);
         }
         h2{            
-            font-size: clamp(1rem, 2vw, 4rem);
+            font-size: clamp(0.7rem, 3vw, 2rem);
         }
     }
 }
 
 .util{
     display: flex;
-    min-width: 400px;
+    
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     width: 100%;
 
     @media screen and (min-width: $largeur__media-tablette){
+        min-width: 400px;
         align-items: flex-end;
         width: 25%;
         flex-direction: row;

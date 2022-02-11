@@ -339,6 +339,7 @@ html {
 ELEMENTS
 --------------------------------------------------------- */
 a {
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
   color: #00f;
 }
 
@@ -397,7 +398,7 @@ COMPOSANTS
 .cours__carte h2 {
   color: #f7f7f7;
   text-align: left;
-  font-size: clamp(0.5rem, 4vw, 1.4rem);
+  font-size: clamp(0.5rem, 3vw, 1.4rem);
 }
 
 .cours__carte p {
@@ -453,6 +454,10 @@ COMPOSANTS
   padding: 2rem 0;
 }
 
+.site__footer .menu {
+  margin-left: 10px;
+}
+
 .site__header {
   display: flex;
   flex-direction: column;
@@ -473,17 +478,16 @@ COMPOSANTS
 }
 
 .site__header__titre h1 {
-  padding: 0 clamp(1rem, 2vw, 7rem) 0 0;
-  font-size: clamp(1.5rem, 4vw, 6rem);
+  padding: 0 clamp(0.7rem, 2vw, 7rem) 0 0;
+  font-size: clamp(1.2rem, 4vw, 4rem);
 }
 
 .site__header__titre h2 {
-  font-size: clamp(1rem, 2vw, 4rem);
+  font-size: clamp(0.7rem, 3vw, 2rem);
 }
 
 .util {
   display: flex;
-  min-width: 400px;
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
@@ -492,6 +496,7 @@ COMPOSANTS
 
 @media screen and (min-width: 768px) {
   .util {
+    min-width: 400px;
     align-items: flex-end;
     width: 25%;
     flex-direction: row;
@@ -584,6 +589,10 @@ COMPOSANTS
   #burger {
     display: none;
   }
+}
+
+#burger svg {
+  color: #a7adb5;
 }
 
 #chk-burger:checked ~ .menu-principal-container {

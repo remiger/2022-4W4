@@ -10,10 +10,15 @@
     position: absolute;
     top: 0px;
     left: 0;
+    
     transition: transform 0.3s;
 
     @media screen and (min-width: $largeur__media-tablette){
         display: none;
+    }
+
+    svg{
+        color: $color__texte__icones;
     }
 }
 #chk-burger:checked ~ .menu-principal-container{
