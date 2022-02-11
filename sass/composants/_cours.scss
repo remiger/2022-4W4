@@ -1,17 +1,16 @@
 .cours{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 .cours__carte{
     display: flex;
     flex-direction: column;
-    margin: 5px;
-    padding: 0 20px;
+    padding: 0 10px;
     border-radius: 10px;
     transition: 0.5s;
-    width: 100%;
     
     h2{
         color: $color__texte__defaut;
@@ -27,12 +26,12 @@
     }
 
     @media screen and (min-width: $largeur__media-tablette){
-        width: 40%;
         margin: 10px;
+        max-width: 45%;
     }
     @media screen and (min-width: $largeur__media-desktop){
-        width: 28%;
-        margin: 20px;
+        height: auto;
+        max-width: 30%;
     }
 
     border: 2px solid rgb(244, 244, 255);

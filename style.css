@@ -377,18 +377,17 @@ COMPOSANTS
 
 .cours {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .cours__carte {
   display: flex;
   flex-direction: column;
-  margin: 5px;
-  padding: 0 20px;
+  padding: 0 10px;
   border-radius: 10px;
   transition: 0.5s;
-  width: 100%;
   border: 2px solid #f4f4ff;
   background-color: #b7b6af;
 }
@@ -406,17 +405,17 @@ COMPOSANTS
   font-weight: bold;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .cours__carte {
-    width: 40%;
     margin: 10px;
+    max-width: 45%;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .cours__carte {
-    width: 28%;
-    margin: 20px;
+    height: auto;
+    max-width: 30%;
   }
 }
 
@@ -453,7 +452,7 @@ COMPOSANTS
   align-items: center;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .site__header {
     flex-direction: row;
   }
@@ -483,7 +482,7 @@ COMPOSANTS
   width: 100%;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .util {
     width: 25%;
   }
@@ -554,7 +553,7 @@ COMPOSANTS
   transition: transform 0.3s;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   #burger {
     display: none;
   }
@@ -569,7 +568,7 @@ COMPOSANTS
   padding: 20px 0 0;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .menu-principal-container {
     display: block;
   }
@@ -609,7 +608,7 @@ LAYOUT
   grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 768px) {
   .site {
     grid-template-columns: 300px auto;
     grid-template-areas: "header header" "sidebar main" "footer footer";
