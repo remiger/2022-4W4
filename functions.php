@@ -11,7 +11,10 @@
 
 
     function cidw_4w4_enregistre_menu() {
-        register_nav_menu( 'principal', __( 'Menu principal', 'cidw_4w4' ) );
+        register_nav_menus( array(
+                            'principal' => __( 'Menu principal', 'cidw_4w4' ),
+                            'footer' => __('Menu pied de page', 'cidw-4w4'))
+                        );
     }
 
     add_action( "after_setup_theme", "cidw_4w4_enregistre_menu" );
