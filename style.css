@@ -388,6 +388,8 @@ COMPOSANTS
   padding: 0 10px;
   border-radius: 10px;
   transition: 0.5s;
+  max-width: 45%;
+  margin: 6px 3px;
   border: 2px solid #f4f4ff;
   background-color: #b7b6af;
 }
@@ -395,10 +397,12 @@ COMPOSANTS
 .cours__carte h2 {
   color: #f7f7f7;
   text-align: left;
+  font-size: clamp(0.5rem, 4vw, 1.4rem);
 }
 
 .cours__carte p {
   margin: 5px 0;
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
 }
 
 .cours__carte p:nth-of-type(1), .cours__carte .cours__carte p:nth-of-type(2) {
@@ -427,6 +431,10 @@ COMPOSANTS
   box-shadow: 5px 10px 15px rgba(233, 233, 233, 0.6);
   border-radius: 0px;
   transition: 0.5s;
+}
+
+.site__footer {
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
 }
 
 .site__footer section {
@@ -466,7 +474,7 @@ COMPOSANTS
 
 .site__header__titre h1 {
   padding: 0 clamp(1rem, 2vw, 7rem) 0 0;
-  font-size: clamp(2rem, 4vw, 6rem);
+  font-size: clamp(1.5rem, 4vw, 6rem);
 }
 
 .site__header__titre h2 {
@@ -478,13 +486,24 @@ COMPOSANTS
   min-width: 400px;
   justify-content: space-between;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
 }
 
 @media screen and (min-width: 768px) {
   .util {
+    align-items: flex-end;
     width: 25%;
+    flex-direction: row;
+  }
+  .util .icone {
+    margin-bottom: 0px;
+    margin: 0 auto;
+  }
+  .util .recherche {
+    margin-bottom: 0;
+    width: auto;
+    margin-right: 20px;
   }
 }
 
@@ -497,6 +516,7 @@ COMPOSANTS
 .icone {
   display: flex;
   flex-wrap: nowrap;
+  margin-bottom: 10px;
 }
 
 .icone__lien {
@@ -509,6 +529,8 @@ COMPOSANTS
 
 .recherche {
   position: relative;
+  width: 80%;
+  margin-bottom: 20px;
 }
 
 .recherche__input {
@@ -517,6 +539,8 @@ COMPOSANTS
   outline: none;
   font-style: italic;
   background-color: #5f6a75;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .recherche__bouton {
@@ -532,6 +556,7 @@ COMPOSANTS
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 5px;
 }
 
 .recherche__bouton svg {
@@ -550,6 +575,8 @@ COMPOSANTS
 
 #burger {
   position: absolute;
+  top: 0px;
+  left: 0;
   transition: transform 0.3s;
 }
 
@@ -561,16 +588,35 @@ COMPOSANTS
 
 #chk-burger:checked ~ .menu-principal-container {
   display: block;
+  animation-duration: 1s;
+  animation-name: glisser;
+}
+
+#chk-burger:checked ~ .menu-principal {
+  display: block;
 }
 
 .menu-principal-container {
   display: none;
+  overflow: hidden;
   padding: 20px 0 0;
+  transition: 0.5s;
 }
 
 @media screen and (min-width: 768px) {
   .menu-principal-container {
     display: block;
+  }
+}
+
+@keyframes glisser {
+  from {
+    height: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    height: 100%;
+    transform: translateX(0);
   }
 }
 

@@ -8,23 +8,44 @@
 
 #burger{
     position: absolute;
+    top: 0px;
+    left: 0;
     transition: transform 0.3s;
 
     @media screen and (min-width: $largeur__media-tablette){
         display: none;
     }
 }
-
 #chk-burger:checked ~ .menu-principal-container{
     display: block;
+    animation-duration: 1s;
+    animation-name: glisser;
+}
+
+#chk-burger:checked ~ .menu-principal{
+    display: block;
+    
 }
 
 .menu-principal-container{
     display: none;
+    overflow: hidden;
     padding: 20px 0 0;
-
+    transition: 0.5s;
     @media screen and (min-width: $largeur__media-tablette){
         display: block;
+    }
+}
+
+@keyframes glisser {
+    from {
+        height: 0;
+        transform: translateX(-200px);
+    }
+
+    to {
+        height: 100%;
+        transform: translateX(0);
     }
 }
 

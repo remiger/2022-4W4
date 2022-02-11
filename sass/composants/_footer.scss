@@ -1,4 +1,5 @@
 .site__footer{
+    font-size: clamp(0.5rem, 2vw, 1.2rem);
     section{
         display: flex;
         flex-direction: row-reverse;
