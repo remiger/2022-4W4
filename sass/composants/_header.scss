@@ -1,7 +1,7 @@
 .site__header{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
     @media screen and (min-width: $largeur__media-tablette) {
@@ -9,6 +9,7 @@
     }
 
     &__titre{
+        color: $color__texte__defaut;
         display: flex;
         align-items: center;
         h1{
@@ -23,6 +24,8 @@
 
 .util{
     display: flex;
+    min-width: 400px;
+    justify-content: space-between;
     flex-direction: column;
     align-items: flex-end;
     width: 100%;
@@ -30,25 +33,40 @@
     @media screen and (min-width: $largeur__media-tablette){
         width: 25%;
     }
+    @media screen and (min-width: $largeur__media-desktop){
+        flex-direction: row;
+    }
 }
 .icone{
+    display: flex;
+    flex-wrap: nowrap;
+    
     // .icone__lien
     &__lien{
-        
+        margin-right: 0.1rem;
+        svg{
+            color: $color__texte__icones;
+        }
     }
 }
            
 .recherche{
     position: relative;
+    
     &__input{
         height: 23px;
         border: none;
         outline: none;
+        font-style: italic;
+        background-color: $color__colorbackground-recherche;
     }
     &__bouton{
+        padding: 0;
+        background-color: $color__colorbackground-recherche;
         top: 0;
         right: 0;
         width: 23px;
+        height: 23px;
         outline: none;
         border: none;
         position: absolute;
@@ -56,8 +74,9 @@
         justify-content: center;
         align-items: center;
         svg{
-            width: 30px;
-            height: 30px;
+            color: $color__texte__recherche;
+            width: 100%;
+            height: auto;
         }
     }
 }

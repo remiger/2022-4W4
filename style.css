@@ -386,9 +386,24 @@ COMPOSANTS
   flex-direction: column;
   margin: 5px;
   padding: 0 20px;
+  border-radius: 10px;
+  transition: 0.5s;
   width: 100%;
   border: 2px solid #f4f4ff;
   background-color: #b7b6af;
+}
+
+.cours__carte h2 {
+  color: #f7f7f7;
+  text-align: left;
+}
+
+.cours__carte p {
+  margin: 5px 0;
+}
+
+.cours__carte p:nth-of-type(1), .cours__carte .cours__carte p:nth-of-type(2) {
+  font-weight: bold;
 }
 
 @media screen and (min-width: 500px) {
@@ -410,26 +425,15 @@ COMPOSANTS
 }
 
 .cours__carte:hover {
-  box-shadow: 5px 15px 15px rgba(233, 233, 233, 0.6);
-}
-
-.cours__carte h2 {
-  color: #73726e;
-  text-align: left;
-}
-
-.cours__carte p {
-  margin: 5px 0;
-}
-
-.cours__carte p:nth-of-type(1), .cours__carte p:nth-of-type(2) {
-  font-weight: bold;
+  box-shadow: 5px 10px 15px rgba(233, 233, 233, 0.6);
+  border-radius: 0px;
+  transition: 0.5s;
 }
 
 .site__header {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -440,6 +444,7 @@ COMPOSANTS
 }
 
 .site__header__titre {
+  color: #f7f7f7;
   display: flex;
   align-items: center;
 }
@@ -455,6 +460,8 @@ COMPOSANTS
 
 .util {
   display: flex;
+  min-width: 400px;
+  justify-content: space-between;
   flex-direction: column;
   align-items: flex-end;
   width: 100%;
@@ -466,6 +473,25 @@ COMPOSANTS
   }
 }
 
+@media screen and (min-width: 1000px) {
+  .util {
+    flex-direction: row;
+  }
+}
+
+.icone {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.icone__lien {
+  margin-right: 0.1rem;
+}
+
+.icone__lien svg {
+  color: #a7adb5;
+}
+
 .recherche {
   position: relative;
 }
@@ -474,12 +500,17 @@ COMPOSANTS
   height: 23px;
   border: none;
   outline: none;
+  font-style: italic;
+  background-color: #5f6a75;
 }
 
 .recherche__bouton {
+  padding: 0;
+  background-color: #5f6a75;
   top: 0;
   right: 0;
   width: 23px;
+  height: 23px;
   outline: none;
   border: none;
   position: absolute;
@@ -489,8 +520,9 @@ COMPOSANTS
 }
 
 .recherche__bouton svg {
-  width: 30px;
-  height: 30px;
+  color: #cad1d4;
+  width: 100%;
+  height: auto;
 }
 
 #chk-burger {
@@ -552,7 +584,7 @@ COMPOSANTS
 LAYOUT
 --------------------------------------------------------- */
 .site {
-  background-color: #fff;
+  background-color: #d1d6d9;
   font-family: arial;
   color: white;
   display: grid;
@@ -571,7 +603,7 @@ LAYOUT
 /* fin @media tablette */
 .site__header {
   grid-area: header;
-  background-color: #ab2121;
+  background-color: #202931;
 }
 
 .site__footer {
@@ -581,11 +613,11 @@ LAYOUT
 
 .site__main {
   grid-area: main;
-  background-color: #aaaaaa;
+  background-color: #313530;
 }
 
 .site__barre {
   grid-area: sidebar;
-  background-color: #c88687;
+  background-color: #404b57;
 }
 /*# sourceMappingURL=style.css.map */

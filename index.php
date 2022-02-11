@@ -1,6 +1,5 @@
 <?php get_header() ?>
 <main class="site__main">
-    <h2>Liste de cours</h2>
     <?php if(have_posts()): ?>
         <section class="cours">
             <?php while(have_posts()): the_post(); ?>
