@@ -1,0 +1,17 @@
+.site__footer{
+    section{
+        display: flex;
+        flex-direction: row-reverse;
+
+        > *{
+            padding: 1rem 0;
+            width: 33%;
+            line-height: 2;
+        }
+    }
+
+    > p{
+        text-align: center;
+        padding: 2rem 0;
+    }
+}

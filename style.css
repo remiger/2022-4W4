@@ -430,6 +430,22 @@ COMPOSANTS
   transition: 0.5s;
 }
 
+.site__footer section {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.site__footer section > * {
+  padding: 1rem 0;
+  width: 33%;
+  line-height: 2;
+}
+
+.site__footer > p {
+  text-align: center;
+  padding: 2rem 0;
+}
+
 .site__header {
   display: flex;
   flex-direction: column;
@@ -584,7 +600,7 @@ COMPOSANTS
 LAYOUT
 --------------------------------------------------------- */
 .site {
-  background-color: #d1d6d9;
+  background-color: #e3e9ec;
   font-family: arial;
   color: white;
   display: grid;
