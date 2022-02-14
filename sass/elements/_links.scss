@@ -1,15 +1,15 @@
-a {
+@mixin links($couleur, $couleur-visited, $couleur-hover) {
 	font-size: clamp(0.5rem, 2vw, 1.2rem);
-	color: $color__link;
+	color: $couleur;
 
 	&:visited {
-		color: $color__link-visited;
+		color: $couleur-visited;
 	}
 
 	&:hover,
 	&:focus,
 	&:active {
-		color: $color__link-hover;
+		color: $couleur-hover;
 	}
 
 	&:focus {
@@ -20,4 +20,12 @@ a {
 	&:active {
 		outline: 0;
 	}
+}
+
+a{
+	@include links($color__link, $color__link-visited, $color__link-hover);
+}
+
+.site__footer a{
+	@include links($color__link__footer, $color__link__footer-visited, $color__link__footer-hover);
 }

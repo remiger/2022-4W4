@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-Theme name: Exercice-1-Remi-Gervais
+Theme name: Exercice-04-Remi-Gervais
 Author: Rémi Gervais
-Description: Exercice 1 dans le cadre du cours 4W4
+Description: Exercice 4 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -359,6 +359,27 @@ a:hover, a:active {
   outline: 0;
 }
 
+.site__footer a {
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  color: yellow;
+}
+
+.site__footer a:visited {
+  color: red;
+}
+
+.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
+  color: green;
+}
+
+.site__footer a:focus {
+  outline: thin dotted;
+}
+
+.site__footer a:hover, .site__footer a:active {
+  outline: 0;
+}
+
 /* ---------------------------------------------------------
 COMPOSANTS
 --------------------------------------------------------- */
@@ -447,6 +468,19 @@ COMPOSANTS
   padding: 1rem 0;
   width: 33%;
   line-height: 2;
+}
+
+.site__footer .footer__menu {
+  list-style-type: none;
+}
+
+.site__footer .footer__menu a {
+  display: flex;
+  align-items: center;
+}
+
+.site__footer .footer__menu a svg {
+  padding-right: 10px;
 }
 
 .site__footer > p {
