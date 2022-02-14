@@ -546,6 +546,12 @@ COMPOSANTS
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .util .recherche {
+    margin: auto 0;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .util {
     flex-direction: row;
@@ -564,6 +570,20 @@ COMPOSANTS
 
 .icone__lien svg {
   color: #a7adb5;
+}
+
+@media screen and (min-width: 768px) {
+  .icone__lien svg {
+    width: 28px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .icone__lien svg {
+    width: 32px;
+    height: auto;
+  }
 }
 
 .recherche {

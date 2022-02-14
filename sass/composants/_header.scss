@@ -44,6 +44,10 @@
             margin-bottom: 0;
             width: auto;
             margin-right: 20px;
+
+            @media screen and (min-width: $largeur__media-tablette) {
+                margin: auto 0;
+            }
         }
     }
     @media screen and (min-width: $largeur__media-desktop){
@@ -59,6 +63,14 @@
         margin-right: 0.1rem;
         svg{
             color: $color__texte__icones;
+            @media screen and (min-width: $largeur__media-tablette){
+                width: 28px;
+                height: auto;
+            }
+            @media screen and (min-width: $largeur__media-desktop){
+                width: 32px;
+                height: auto;
+            }
         }
     }
 }
