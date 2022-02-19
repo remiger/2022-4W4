@@ -11,7 +11,7 @@ get_header();
 ?>
 
 <main class="site__main">
-    <!-- <h1>---- single.php ----</h1> -->
+    <!-- <h1>---- page.php ----</h1> -->
     <?php if(have_posts()):the_post(); ?>
 
     <h2><?php the_title(); ?></h2>

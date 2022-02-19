@@ -1,0 +1,12 @@
+.formation{
+    display: flex;
+    flex-direction: column;
+    background-color: $color__colorbackground-formation;
+    h2{
+        padding-top: 20px;
+        margin-left: 20px;
+    }
+    &__liste{
+        padding: 0 20px 20px 20px;
+    }
+}

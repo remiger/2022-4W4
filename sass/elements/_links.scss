@@ -23,9 +23,19 @@
 }
 
 a{
-	@include links($color__link, $color__link-visited, $color__link-hover);
+	@include links( $color__link, 
+					$color__link-visited, 
+					$color__link-hover);
 }
 
 .site__footer a{
-	@include links($color__link__footer, $color__link__footer-visited, $color__link__footer-hover);
+	@include links( $color__link__footer,
+	 			    $color__link__footer-visited, 
+	 			    $color__link__footer-hover);
+}
+
+.site__header a{
+	@include links(	$color__link__header,
+					$color__link__header-visited, 
+					$color__link__header-hover );
 }
