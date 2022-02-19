@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercice 1 - Rémi Gervais</title>
+    <title>Lab 04 - Rémi Gervais</title>
     <?php wp_head(); ?>
 </head>
 <body <?php body_class('site'); ?>>
 <header class="site__header">
     <section class="site__header__titre">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <h1 class="header__titre"><?php echo get_bloginfo(); ?></h1>
         <h2 class="header__description"> <?php echo get_bloginfo('description'); ?></h2>
+    </a>
     </section>
     <section class="util">
         <div class="icone">

@@ -11,6 +11,18 @@
         }
     }
 
+    .footer__menu {
+        list-style-type: none;
+        a{
+            display: flex;
+            align-items: center;
+    
+            svg{
+                padding-right: 10px;
+            }
+        }
+    }
+
     > p{
         text-align: center;
         padding: 2rem 0;

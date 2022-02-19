@@ -1,8 +1,8 @@
 @charset "UTF-8";
 /**
-Theme name: Exercice-1-Remi-Gervais
+Theme name: Laboratoire-04-Remi-Gervais
 Author: Rémi Gervais
-Description: Exercice 1 dans le cadre du cours 4W4
+Description: Lab 04 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -11,6 +11,9 @@ Text Domain: cidw-4w4
 /* ---------------------------------------------------------
 VARIABLES
 --------------------------------------------------------- */
+/* ---------------- LIENS DEFAUT */
+/* ---------------- LIENS FOOTER */
+/* ---------------- LIENS HEADER */
 /* ---------------------------------------------------------
 INITIALISATION
 --------------------------------------------------------- */
@@ -359,6 +362,105 @@ a:hover, a:active {
   outline: 0;
 }
 
+.site__footer a {
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  color: yellow;
+}
+
+.site__footer a:visited {
+  color: red;
+}
+
+.site__footer a:hover, .site__footer a:focus, .site__footer a:active {
+  color: green;
+}
+
+.site__footer a:focus {
+  outline: thin dotted;
+}
+
+.site__footer a:hover, .site__footer a:active {
+  outline: 0;
+}
+
+.site__header a {
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  color: #bd6565;
+}
+
+.site__header a:visited {
+  color: #e7a01d;
+}
+
+.site__header a:hover, .site__header a:focus, .site__header a:active {
+  color: #46ce4c;
+}
+
+.site__header a:focus {
+  outline: thin dotted;
+}
+
+.site__header a:hover, .site__header a:active {
+  outline: 0;
+}
+
+/* ---------------------------------------------------------
+ANIMATIONS
+--------------------------------------------------------- */
+.animation {
+  display: flex;
+  width: 90%;
+  border: 1px solid #f00;
+  justify-content: space-around;
+}
+
+.animation__bloc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #00f;
+  background-color: #00f;
+  color: #fff;
+  animation: anim_bloc 1s 1s forwards;
+}
+
+.animation__bloc:nth-of-type(1) {
+  transform: translateY(-100vh);
+  transition: transform 0.5s 3s;
+}
+
+.animation__bloc:nth-of-type(2) {
+  transform: translateY(100vh);
+  transition: transform 0.5s 3s;
+}
+
+.animation__bloc:nth-of-type(3) {
+  transform: translateX(-100vw);
+  transition: transform 0.5s 3s;
+}
+
+.animation__bloc:nth-of-type(4) {
+  transform: translateX(100vw);
+  transition: transform 0.5s 3s;
+}
+
+.animation__bloc:nth-of-type(5) {
+  transform: translateY(100vw);
+  transition: transform 0.5s 3s;
+}
+
+@keyframes anim_bloc {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* ---------------------------------------------------------
 COMPOSANTS
 --------------------------------------------------------- */
@@ -449,6 +551,19 @@ COMPOSANTS
   line-height: 2;
 }
 
+.site__footer .footer__menu {
+  list-style-type: none;
+}
+
+.site__footer .footer__menu a {
+  display: flex;
+  align-items: center;
+}
+
+.site__footer .footer__menu a svg {
+  padding-right: 10px;
+}
+
 .site__footer > p {
   text-align: center;
   padding: 2rem 0;
@@ -458,6 +573,23 @@ COMPOSANTS
   margin-left: 10px;
 }
 
+/*
+⠀⠘⡀⠀⠀"it's not my code"⠀⠀⠀⠀⠀⡜⠀⠀⠀ ⠀⠀
+⠀⠀⠀⠈⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠴⠊⠀⠀⠀⠀⠀ ⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠘⣀⠄⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀
+⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿ 
+⣿⣿⣿⢏⣴⣿⣷⠀⠀⠀⠀⠀⢾⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿
+⣿⣿⣿⣿⣟⠀⡴⠄⠀⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⣿ 
+⣿⣁⡀⠀⠀⢰⢠⣦⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⡄⠀⣴⣶⣿⡄⣿ 
+⣿⣿⠋⢀⡌⢰⣿⡿⢿⡀⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣧
+⣿⣿⣧⠀⠈⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠀⠀⠀⠀⢀⢃⠀⠀⢸⣿⣿⣿⣿ 
+⣿⣿⣿⡀⢠⣾⣿⠏⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠉⠀⣿⣿⣿⣿ 
+⣿⣿⣿⣿⡄⠈⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠁⠀⠀⠹⣿⠃⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣿⣿⣿⣿⠿⠛⠉⠉⠁⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⢀⠈⣿⣿⡿⠉⠛⠛⠛⠉⠉
+*/
 .site__header {
   display: flex;
   flex-direction: column;
@@ -475,6 +607,13 @@ COMPOSANTS
   color: #f7f7f7;
   display: flex;
   align-items: center;
+}
+
+.site__header__titre a {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
 }
 
 .site__header__titre h1 {
@@ -512,6 +651,12 @@ COMPOSANTS
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .util .recherche {
+    margin: auto 0;
+  }
+}
+
 @media screen and (min-width: 1000px) {
   .util {
     flex-direction: row;
@@ -530,6 +675,20 @@ COMPOSANTS
 
 .icone__lien svg {
   color: #a7adb5;
+}
+
+@media screen and (min-width: 768px) {
+  .icone__lien svg {
+    width: 28px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .icone__lien svg {
+    width: 32px;
+    height: auto;
+  }
 }
 
 .recherche {
@@ -648,6 +807,36 @@ COMPOSANTS
 
 .menu-item a:hover {
   background-color: #aaa;
+}
+
+.formation {
+  display: flex;
+  flex-direction: column;
+  background-color: #617080;
+}
+
+.formation h2 {
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.formation__liste {
+  padding: 0 20px 20px 20px;
+}
+
+.site__main {
+  display: flex;
+  flex-direction: column;
+  background-color: #617080;
+}
+
+.site__main h2 {
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+.site__main p {
+  padding: 0 20px 20px 20px;
 }
 
 /* ---------------------------------------------------------

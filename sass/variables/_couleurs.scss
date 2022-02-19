@@ -1,6 +1,7 @@
 $color__background-body: rgb(227, 233, 236);
 $color__colorbackground-header: rgb(32,41,49);
 $color__colorbackground-barre: rgb(64, 75, 87);
+$color__colorbackground-formation: rgb(97, 112, 128);
 $color__colorbackground-main: rgb(49, 53, 48);
 $color__colorbackground-footer: rgb(21, 21, 21);
 $color__colorbackground-recherche: rgb(95, 106, 117);
@@ -16,7 +17,18 @@ $color__cours__shadow: rgba(233, 233, 233, 0.6);
 
 $color__carte__bordure: #73726e;
 
+/* ---------------- LIENS DEFAUT */
 $color__link: #00f;
 $color__link-visited: rgb(91, 91, 185);
 $color__link-hover: #00a;
 $color__background-link-hover: #aaa;
+
+/* ---------------- LIENS FOOTER */
+$color__link__footer: yellow;
+$color__link__footer-visited: red;
+$color__link__footer-hover: green;
+
+/* ---------------- LIENS HEADER */
+$color__link__header : hsl(0, 40%, 57%);
+$color__link__header-hover : hsl(123, 58%, 54%);
+$color__link__header-visited : hsl(39, 81%, 51%);
