@@ -2,7 +2,6 @@
     position: relative;
     width: 80%;
     margin-bottom: 20px;
-    background-color: rgba(0,0,0, 0.1);
     &__input{
         padding: 15px 5px;
         height: 23px;
@@ -15,7 +14,7 @@
     }
     &__bouton{
         padding: 0;
-        background-color: $color__colorbackground-recherche;
+        background-color: transparent;
         top: 0;
         right: 0;
         width: 30px;

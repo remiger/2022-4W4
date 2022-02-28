@@ -411,7 +411,7 @@ p {
 }
 
 .site__footer p {
-  font-size: clamp(1rem, 3vw, 1.3rem);
+  font-size: clamp(1rem, 1vw, 1.3rem);
   color: #d1d1d1;
 }
 
@@ -570,12 +570,15 @@ COMPOSANTS
 }
 
 .site__footer section > * {
+  display: flex;
+  justify-content: center;
   padding: 1rem 0;
   width: 33%;
   line-height: 2;
 }
 
 .site__footer .footer__menu {
+  padding: 0;
   list-style-type: none;
 }
 
@@ -726,14 +729,14 @@ COMPOSANTS
   border: none;
   outline: none;
   font-style: italic;
-  background-color: #5f6a75;
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   border-radius: 5px;
 }
 
 .recherche__bouton {
   padding: 0;
-  background-color: #5f6a75;
+  background-color: rgba(255, 255, 255, 0.5);
   top: 0;
   right: 0;
   width: 23px;
@@ -862,7 +865,6 @@ COMPOSANTS
 .site__main p, .site__main h3 {
   margin: 0;
   padding: 0 20px 20px 20px;
-  font-size: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 .site__main h3 {
@@ -882,7 +884,6 @@ COMPOSANTS
   position: relative;
   width: 80%;
   margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .recherche__input {
@@ -891,14 +892,14 @@ COMPOSANTS
   border: none;
   outline: none;
   font-style: italic;
-  background-color: #5f6a75;
+  background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   border-radius: 5px;
 }
 
 .recherche__bouton {
   padding: 0;
-  background-color: #5f6a75;
+  background-color: transparent;
   top: 0;
   right: 0;
   width: 30px;

@@ -9,6 +9,8 @@
         flex-direction: row-reverse;
 
         > *{
+            display: flex;
+            justify-content: center;
             padding: 1rem 0;
             width: 33%;
             line-height: 2;
@@ -16,6 +18,7 @@
     }
 
     .footer__menu {
+        padding: 0;
         list-style-type: none;
         a{
             display: flex;
