@@ -1,0 +1,25 @@
+@mixin paragraphe($p-taille-min, $p-taille-grossissment, $p-taille-max, $p-couleur) {
+	font-size: clamp($p-taille-min, $p-taille-grossissment, $p-taille-max);
+	color: $p-couleur;
+}
+
+p{
+	@include paragraphe( $p-taille-min, 
+                    $p-taille-grossissment,
+					$p-taille-max,
+                    $p-couleur);
+}
+
+.site__footer p{
+    @include paragraphe( $p-taille-min__footer, 
+                        $p-taille-grossissment__footer,
+                        $p-taille-max__footer,
+                        $p-couleur__footer);
+}
+
+.site__header p{
+	@include paragraphe( $p-taille-min__header, 
+                        $p-taille-grossissment__header,
+                        $p-taille-max__header,
+                        $p-couleur__header);
+}
