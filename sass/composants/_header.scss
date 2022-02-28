@@ -82,37 +82,5 @@
     }
 }
            
-.recherche{
-    position: relative;
-    width: 80%;
-    margin-bottom: 20px;
-    &__input{
-        height: 23px;
-        border: none;
-        outline: none;
-        font-style: italic;
-        background-color: $color__colorbackground-recherche;
-        width: 100%;
-        border-radius: 5px;
-    }
-    &__bouton{
-        padding: 0;
-        background-color: $color__colorbackground-recherche;
-        top: 0;
-        right: 0;
-        width: 23px;
-        height: 23px;
-        outline: none;
-        border: none;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 5px;
-        svg{
-            color: $color__texte__recherche;
-            width: 100%;
-            height: auto;
-        }
-    }
-}
+
+

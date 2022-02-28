@@ -716,44 +716,6 @@ COMPOSANTS
   }
 }
 
-.recherche {
-  position: relative;
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.recherche__input {
-  height: 23px;
-  border: none;
-  outline: none;
-  font-style: italic;
-  background-color: rgba(255, 255, 255, 0.5);
-  width: 100%;
-  border-radius: 5px;
-}
-
-.recherche__bouton {
-  padding: 0;
-  background-color: rgba(255, 255, 255, 0.5);
-  top: 0;
-  right: 0;
-  width: 23px;
-  height: 23px;
-  outline: none;
-  border: none;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.recherche__bouton svg {
-  color: #cad1d4;
-  width: 100%;
-  height: auto;
-}
-
 #chk-burger {
   display: none;
 }
@@ -928,6 +890,20 @@ COMPOSANTS
   color: #cad1d4;
   width: 100%;
   height: auto;
+}
+
+.site__barre .header__menu {
+  padding: 0;
+  list-style-type: none;
+}
+
+.site__barre .header__menu a {
+  display: flex;
+  align-items: center;
+}
+
+.site__barre .header__menu a svg {
+  padding-right: 10px;
 }
 
 /* ---------------------------------------------------------
