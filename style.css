@@ -405,6 +405,21 @@ a:hover, a:active {
   outline: 0;
 }
 
+p {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: #fff;
+}
+
+.site__footer p {
+  font-size: clamp(1rem, 3vw, 1.3rem);
+  color: #d1d1d1;
+}
+
+.site__header p {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  color: whitesmoke;
+}
+
 /* ---------------------------------------------------------
 ANIMATIONS
 --------------------------------------------------------- */
