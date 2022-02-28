@@ -4,6 +4,7 @@
     margin-bottom: 20px;
     background-color: rgba(0,0,0, 0.1);
     &__input{
+        padding: 15px 5px;
         height: 23px;
         border: none;
         outline: none;
@@ -17,8 +18,8 @@
         background-color: $color__colorbackground-recherche;
         top: 0;
         right: 0;
-        width: 23px;
-        height: 23px;
+        width: 30px;
+        height: 30px;
         outline: none;
         border: none;
         position: absolute;

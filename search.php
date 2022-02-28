@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <main class="site__main">
-    <h1>------search.php------</h1>
+    <!-- <h1>------search.php------</h1> -->
     <?php if(have_posts()) : ?>
         <?php while(have_posts()) : the_post()?>
-            <h3>
-                <?= get_permalink(); ?>
-            <?php the_title(); ?></h3>
+            <a href="<?= get_permalink(); ?>">
+                <h3><?php the_title(); ?></h3>
+            </a>
             <p><?= wp_trim_words(get_the_content(), 20, "...>"); ?></p>
             <hr>
         <?php endwhile; ?>

@@ -1,7 +1,8 @@
 @charset "UTF-8";
 /**
-Theme name: Exercice-02-Remi-Gervais
+Theme name: 2022-4w4-exer-2 Remi Gervais
 Author: Rémi Gervais
+Author URI: https://github.com/remiger/2022-4W4
 Description: Exercice 02 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
@@ -541,6 +542,10 @@ COMPOSANTS
 }
 
 .site__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: clamp(0.5rem, 2vw, 1.2rem);
 }
 
@@ -839,8 +844,18 @@ COMPOSANTS
   margin-left: 20px;
 }
 
-.site__main p {
+.site__main p, .site__main h3 {
+  margin: 0;
   padding: 0 20px 20px 20px;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+.site__main h3 {
+  font-size: clamp(0.8rem, 2vw, 1.4rem);
+}
+
+.site__main h3:first-of-type {
+  padding-top: 20px;
 }
 
 .erreur-404 h1 {
@@ -856,6 +871,7 @@ COMPOSANTS
 }
 
 .recherche__input {
+  padding: 15px 5px;
   height: 23px;
   border: none;
   outline: none;
@@ -870,8 +886,8 @@ COMPOSANTS
   background-color: #5f6a75;
   top: 0;
   right: 0;
-  width: 23px;
-  height: 23px;
+  width: 30px;
+  height: 30px;
   outline: none;
   border: none;
   position: absolute;

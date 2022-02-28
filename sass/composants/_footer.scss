@@ -1,4 +1,8 @@
 .site__footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: clamp(0.5rem, 2vw, 1.2rem);
     section{
         display: flex;
