@@ -1,7 +1,7 @@
 /**
-Theme name: Laboratoire-04-Remi-Gervais
+Theme name: Exercice-02-Remi-Gervais
 Author: Rémi Gervais
-Description: Lab 04 dans le cadre du cours 4W4
+Description: Exercice 02 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -13,6 +13,7 @@ VARIABLES
 --------------------------------------------------------- */
 @import "variables/couleurs";
 @import "variables/structure";
+@import "variables/typo";
 
 /* ---------------------------------------------------------
 INITIALISATION
@@ -40,6 +41,8 @@ COMPOSANTS
 @import "composants/navigation";
 @import "composants/formation";
 @import "composants/main";
+@import "composants/404";
+@import "composants/recherche";
 
 /* ---------------------------------------------------------
 LAYOUT

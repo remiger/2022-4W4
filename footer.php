@@ -8,9 +8,11 @@
                                 "menu_class" => "footer__menu",
                                 "container_class" =>"site__footer__nav",
                                 "link_before" => $icone));
+                                get_search_form();
         ?>
         <p>3 800, rue Sherbrooke Est Montréal <br>(Québec) H1X 2A2 <br>514 254-7131 <br>Lorem ipsum dolor quaerat?<br>Lorem ipsum dolor quaerat?<br>Lorem ipsum dolor quaerat?</p>
         
     </section>
     <p>Copyright &copy; 2022 - Collège de Maisonneuve. Tous droits réservés.</p>
 </footer>
+<?php wp_footer(); ?>
