@@ -27,60 +27,58 @@
             font-size: clamp(0.7rem, 3vw, 2rem);
         }
     }
-}
 
-.util{
-    display: flex;
+    .util{
+        display: flex;
+        
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     
-    justify-content: space-between;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-
-    @media screen and (min-width: $largeur__media-tablette){
-        min-width: 400px;
-        align-items: flex-end;
-        width: 25%;
-        flex-direction: row;
-        .icone{
-            margin-bottom: 0px;
-            margin: 0 auto;
-        }
-
-        .recherche{
-            margin-bottom: 0;
-            width: auto;
-            margin-right: 20px;
-
-            @media screen and (min-width: $largeur__media-tablette) {
-                margin: auto 0;
+        @media screen and (min-width: $largeur__media-tablette){
+            min-width: 400px;
+            align-items: flex-end;
+            width: 25%;
+            flex-direction: row;
+            .icone{
+                margin-bottom: 0px;
+                margin: 0 auto;
+            }
+    
+            .recherche{
+                margin-bottom: 0;
+                width: auto;
+                margin-right: 20px;
+    
+                @media screen and (min-width: $largeur__media-tablette) {
+                    margin: auto 0;
+                }
             }
         }
+        @media screen and (min-width: $largeur__media-desktop){
+            flex-direction: row;
+        }
     }
-    @media screen and (min-width: $largeur__media-desktop){
-        flex-direction: row;
-    }
+    .icone{
+        display: flex;
+        flex-wrap: nowrap;
+        margin-bottom: 10px;
+        // .icone__lien
+        &__lien{
+            margin-right: 0.1rem;
+            svg{
+                color: $color__texte__icones;
+                @media screen and (min-width: $largeur__media-tablette){
+                    width: 28px;
+                    height: auto;
+                }
+                @media screen and (min-width: $largeur__media-desktop){
+                    width: 32px;
+                    height: auto;
+                }
+            }
+        }
+    }    
 }
-.icone{
-    display: flex;
-    flex-wrap: nowrap;
-    margin-bottom: 10px;
-    // .icone__lien
-    &__lien{
-        margin-right: 0.1rem;
-        svg{
-            color: $color__texte__icones;
-            @media screen and (min-width: $largeur__media-tablette){
-                width: 28px;
-                height: auto;
-            }
-            @media screen and (min-width: $largeur__media-desktop){
-                width: 32px;
-                height: auto;
-            }
-        }
-    }
-}
-           
-
 
