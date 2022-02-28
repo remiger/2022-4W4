@@ -343,7 +343,7 @@ html {
 ELEMENTS
 --------------------------------------------------------- */
 a {
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: #00f;
 }
 
@@ -364,7 +364,7 @@ a:hover, a:active {
 }
 
 .site__footer a {
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: yellow;
 }
 
@@ -385,7 +385,7 @@ a:hover, a:active {
 }
 
 .site__header a {
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: #bd6565;
 }
 
