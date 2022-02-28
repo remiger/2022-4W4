@@ -18,7 +18,7 @@ get_header();
             <div class="article__contenu">
                 <?php if(has_post_thumbnail()) : ?>
                     <figure class="article__contenu__figure">
-                        <?php the_post_thumbnail(); ?>
+                        <?php the_post_thumbnail('thumbnail'); ?>
                     </figure>
                 <?php endif; ?>
                 <?php the_content(); ?>
