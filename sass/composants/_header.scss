@@ -9,6 +9,7 @@
     }
 
     &__titre{
+        font-family: $font__titre;
         color: $color__texte__defaut;
         display: flex;
         align-items: center;

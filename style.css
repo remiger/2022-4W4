@@ -628,6 +628,7 @@ COMPOSANTS
 }
 
 .site__header__titre {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #f7f7f7;
   display: flex;
   align-items: center;
