@@ -1,4 +1,26 @@
 <footer class="site__footer">
+    <!-- première rangée de colonne -->
+    <div class="site__footer__colonne">
+        <section class="article">
+            <?php get_sidebar('footer_colonne_1'); ?>
+        </section>
+        <section class="adresse">
+            <?php get_sidebar('footer_colonne_2'); ?>
+        </section>
+        <section class="liens">
+            <?php get_sidebar('footer_colonne_3'); ?>
+        </section>
+    </div>
+    <!-- section de plusieurs lignes -->
+    <div class="site__footer__ligne">
+        <section class="footer__description"></section>
+        <section class="footer__nav"></section>
+        <section class="footer__sociaux">
+            <?php get_sidebar('footer_ligne_1'); ?>
+        </section>
+        <section class="copyright"></section>
+        <section class="footer__auteur"></section>
+    </div>
     <section>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam rerum quaerat repudiandae enim ullam minima, sit perspiciatis fugiat necessitatibus cum voluptate neque blanditiis facere? Aperiam vero excepturi modi a unde!</p>
         <?php
