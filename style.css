@@ -1,8 +1,9 @@
 @charset "UTF-8";
 /**
-Theme name: Laboratoire-04-Remi-Gervais
+Theme name: 2022-4w4-exer-2 Remi Gervais
 Author: Rémi Gervais
-Description: Lab 04 dans le cadre du cours 4W4
+Author URI: https://github.com/remiger/2022-4W4/tree/exer-2
+Description: Exercice 02 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -342,7 +343,7 @@ html {
 ELEMENTS
 --------------------------------------------------------- */
 a {
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: #00f;
 }
 
@@ -363,7 +364,7 @@ a:hover, a:active {
 }
 
 .site__footer a {
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: yellow;
 }
 
@@ -384,7 +385,7 @@ a:hover, a:active {
 }
 
 .site__header a {
-  font-size: clamp(0.5rem, 2vw, 1.2rem);
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: #bd6565;
 }
 
@@ -402,6 +403,21 @@ a:hover, a:active {
 
 .site__header a:hover, .site__header a:active {
   outline: 0;
+}
+
+p {
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: #fff;
+}
+
+.site__footer p {
+  font-size: clamp(1rem, 1vw, 1.3rem);
+  color: #d1d1d1;
+}
+
+.site__header p {
+  font-size: clamp(0.9rem, 2vw, 1.3rem);
+  color: whitesmoke;
 }
 
 /* ---------------------------------------------------------
@@ -425,6 +441,20 @@ ANIMATIONS
   background-color: #00f;
   color: #fff;
   animation: anim_bloc 1s 1s forwards;
+}
+
+@media screen and (max-width: 1000px) {
+  .animation__bloc {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .animation__bloc {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .animation__bloc:nth-of-type(1) {
@@ -536,7 +566,15 @@ COMPOSANTS
   transition: 0.5s;
 }
 
+.article__contenu {
+  display: flex;
+}
+
 .site__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-size: clamp(0.5rem, 2vw, 1.2rem);
 }
 
@@ -546,12 +584,15 @@ COMPOSANTS
 }
 
 .site__footer section > * {
+  display: flex;
+  justify-content: center;
   padding: 1rem 0;
   width: 33%;
   line-height: 2;
 }
 
 .site__footer .footer__menu {
+  padding: 0;
   list-style-type: none;
 }
 
@@ -573,23 +614,6 @@ COMPOSANTS
   margin-left: 10px;
 }
 
-/*
-⠀⠘⡀⠀⠀"it's not my code"⠀⠀⠀⠀⠀⡜⠀⠀⠀ ⠀⠀
-⠀⠀⠀⠈⠢⢄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠴⠊⠀⠀⠀⠀⠀ ⠀⠀
-⠀⠀⠀⠀⠀⠀⠀⠘⣀⠄⠊⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀
-⣿⣿⣿⣿⣿⡿⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠛⢿⣿⣿⣿⣿ 
-⣿⣿⣿⢏⣴⣿⣷⠀⠀⠀⠀⠀⢾⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠈⣿⣿
-⣿⣿⣿⣿⣟⠀⡴⠄⠀⠀⠀⠀⠀⠀⠙⠻⣿⣿⣿⣿⣷⣄⠀⠀⠀⠀⠀⠀⠀⣿ 
-⣿⣁⡀⠀⠀⢰⢠⣦⠀⠀⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⡄⠀⣴⣶⣿⡄⣿ 
-⣿⣿⠋⢀⡌⢰⣿⡿⢿⡀⠀⠀⠀⠀⠀⠙⠿⣿⣿⣿⣿⣿⡇⠀⢸⣿⣿⣧
-⣿⣿⣧⠀⠈⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠟⠀⠀⠀⠀⢀⢃⠀⠀⢸⣿⣿⣿⣿ 
-⣿⣿⣿⡀⢠⣾⣿⠏⠀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠛⠉⠀⣿⣿⣿⣿ 
-⣿⣿⣿⣿⡄⠈⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⣿⣿⣿⣿ 
-⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿ 
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⡄⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇⠀⠁⠀⠀⠹⣿⠃⠀⣿⣿⣿⣿⣿⣿⣿⣿⣿
-⣿⣿⣿⣿⠿⠛⠉⠉⠁⠀⢻⣿⡇⠀⠀⠀⠀⠀⠀⢀⠈⣿⣿⡿⠉⠛⠛⠛⠉⠉
-*/
 .site__header {
   display: flex;
   flex-direction: column;
@@ -604,6 +628,7 @@ COMPOSANTS
 }
 
 .site__header__titre {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   color: #f7f7f7;
   display: flex;
   align-items: center;
@@ -625,7 +650,7 @@ COMPOSANTS
   font-size: clamp(0.7rem, 3vw, 2rem);
 }
 
-.util {
+.site__header .util {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -634,17 +659,17 @@ COMPOSANTS
 }
 
 @media screen and (min-width: 768px) {
-  .util {
+  .site__header .util {
     min-width: 400px;
     align-items: flex-end;
     width: 25%;
     flex-direction: row;
   }
-  .util .icone {
+  .site__header .util .icone {
     margin-bottom: 0px;
     margin: 0 auto;
   }
-  .util .recherche {
+  .site__header .util .recherche {
     margin-bottom: 0;
     width: auto;
     margin-right: 20px;
@@ -652,81 +677,43 @@ COMPOSANTS
 }
 
 @media screen and (min-width: 768px) and (min-width: 768px) {
-  .util .recherche {
+  .site__header .util .recherche {
     margin: auto 0;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .util {
+  .site__header .util {
     flex-direction: row;
   }
 }
 
-.icone {
+.site__header .icone {
   display: flex;
   flex-wrap: nowrap;
   margin-bottom: 10px;
 }
 
-.icone__lien {
+.site__header .icone__lien {
   margin-right: 0.1rem;
 }
 
-.icone__lien svg {
+.site__header .icone__lien svg {
   color: #a7adb5;
 }
 
 @media screen and (min-width: 768px) {
-  .icone__lien svg {
+  .site__header .icone__lien svg {
     width: 28px;
     height: auto;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .icone__lien svg {
+  .site__header .icone__lien svg {
     width: 32px;
     height: auto;
   }
-}
-
-.recherche {
-  position: relative;
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-.recherche__input {
-  height: 23px;
-  border: none;
-  outline: none;
-  font-style: italic;
-  background-color: #5f6a75;
-  width: 100%;
-  border-radius: 5px;
-}
-
-.recherche__bouton {
-  padding: 0;
-  background-color: #5f6a75;
-  top: 0;
-  right: 0;
-  width: 23px;
-  height: 23px;
-  outline: none;
-  border: none;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 5px;
-}
-
-.recherche__bouton svg {
-  color: #cad1d4;
-  width: 100%;
-  height: auto;
 }
 
 #chk-burger {
@@ -739,7 +726,7 @@ COMPOSANTS
 
 #burger {
   position: absolute;
-  top: 0px;
+  top: 70px;
   left: 0;
   transition: transform 0.3s;
 }
@@ -835,8 +822,88 @@ COMPOSANTS
   margin-left: 20px;
 }
 
-.site__main p {
+.site__main p, .site__main h3 {
+  margin: 0;
   padding: 0 20px 20px 20px;
+}
+
+.site__main h3 {
+  font-size: clamp(0.8rem, 2vw, 1.4rem);
+}
+
+.site__main h3:first-of-type {
+  padding-top: 20px;
+}
+
+.site__main .article__contenu {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .site__main .article__contenu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.erreur-404 h1 {
+  font-size: 5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+.recherche {
+  position: relative;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.recherche__input {
+  padding: 15px 5px;
+  height: 23px;
+  border: none;
+  outline: none;
+  font-style: italic;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  border-radius: 5px;
+}
+
+.recherche__bouton {
+  padding: 0;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.recherche__bouton svg {
+  color: #cad1d4;
+  width: 100%;
+  height: auto;
+}
+
+.site__barre .menu {
+  padding: 0;
+  list-style-type: none;
+}
+
+.site__barre .menu a {
+  display: flex;
+  align-items: center;
+}
+
+.site__barre .menu a svg {
+  padding-right: 10px;
 }
 
 /* ---------------------------------------------------------
@@ -852,6 +919,20 @@ LAYOUT
   grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
+.home::after {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  clip-path: polygon(88% 0, 100% 0%, 100% 100%, 49% 100%);
+  background-color: #271d5c;
+}
+
 @media screen and (min-width: 768px) {
   .site {
     grid-template-columns: 300px auto;
@@ -862,7 +943,7 @@ LAYOUT
 /* fin @media tablette */
 .site__header {
   grid-area: header;
-  background-color: #202931;
+  background-color: rgba(32, 41, 49, 0.5);
 }
 
 .site__footer {
@@ -872,7 +953,7 @@ LAYOUT
 
 .site__main {
   grid-area: main;
-  background-color: #313530;
+  background-color: rgba(49, 53, 48, 0.5);
 }
 
 .site__barre {

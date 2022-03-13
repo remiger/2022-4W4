@@ -1,4 +1,3 @@
-
 .site {
     background-color: $color__background-body;
     font-family: arial;
@@ -13,6 +12,20 @@
 		"footer";
 }
 
+.home::after{
+    content: '';
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    clip-path: polygon(88% 0, 100% 0%, 100% 100%, 49% 100%);
+    background-color: $color__colorbackground-body-clip;
+}
+
 @media screen and (min-width: $largeur__media-tablette){
     .site {
         grid-template-columns: ($size__site-sidebar) auto;
@@ -25,7 +38,7 @@
 
 .site__header{
     grid-area: header;
-    background-color: $color__colorbackground-header;
+    background-color: rgba($color__colorbackground-header, 0.5);
 }
 
 .site__footer{
@@ -35,7 +48,7 @@
 
 .site__main{
     grid-area: main;
-    background-color: $color__colorbackground-main;
+    background-color: rgba($color__colorbackground-main, 0.5);
 }
 
 .site__barre{

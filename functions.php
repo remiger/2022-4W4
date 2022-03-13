@@ -13,7 +13,8 @@
     function cidw_4w4_enregistre_menu() {
         register_nav_menus( array(
                             'principal' => __( 'Menu principal', 'cidw_4w4' ),
-                            'footer' => __('Menu pied de page', 'cidw-4w4'))
+                            'footer' => __('Menu pied de page', 'cidw-4w4'),
+                            'footer_colonne' => __('Menu footer colonne', 'cidw-4w4'))
                         );
     }
 
@@ -32,5 +33,66 @@
     }
 
     add_filter("wp_nav_menu_objects", "cidw_4w4_filtre_menu_item"); 
+
+    /* ------------------------------------------------------------ add_theme_support() */
+    function cidw_4w4_add_theme_support(){
+        add_theme_support('post-thumbnails');
+        add_theme_support( 'custom-logo', array(
+            'height' => 200,
+            'width'  => 200,
+        ) );
+    }
+    add_action('after_setup_theme', 'cidw_4w4_add_theme_support');
+
+    /* ------------------------------------------------------------ Energistrement des side bars */
+    add_action( 'widgets_init', 'my_register_sidebars' );
+    function my_register_sidebars() {
+        /* Register the 'primary' sidebar. */
+        register_sidebar(
+            array(
+                'id'            => 'footer_colonne_1',
+                'name'          => __( 'Footer colonne 1' ),
+                'description'   => __( 'Ce sidebar s\'affiche dans une colonne du pied de page' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+            )
+        );
+        /* Repeat register_sidebar() code for additional sidebars. */
+        register_sidebar(
+            array(
+                'id'            => 'footer_colonne_2',
+                'name'          => __( 'Footer colonne 2' ),
+                'description'   => __( 'Ce sidebar s\'affiche dans une colonne du pied de page' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+            )
+        );
+        register_sidebar(
+            array(
+                'id'            => 'footer_colonne_3',
+                'name'          => __( 'Footer colonne 3' ),
+                'description'   => __( 'Ce sidebar s\'affiche dans une colonne du pied de page' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+            )
+        );
+        register_sidebar(
+            array(
+                'id'            => 'footer_ligne_1',
+                'name'          => __( 'Footer ligne 1' ),
+                'description'   => __( 'Ce sidebar s\'affiche dans une ligne du pied de page' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+            )
+        );
+    }
 
 ?>

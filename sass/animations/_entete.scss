@@ -15,6 +15,15 @@
         background-color: $color__link;
         color: #fff;
         animation: anim_bloc 1s 1s forwards;
+
+        @media screen and (max-width: $largeur__media-desktop) {
+            width: 80px;
+            height: 80px;
+        }
+        @media screen and (max-width: $largeur__media-tablette) {
+            width: 60px;
+            height: 60px;
+        }
     }
 
     &__bloc:nth-of-type(1){
