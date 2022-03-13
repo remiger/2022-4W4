@@ -2,7 +2,7 @@
 /**
 Theme name: 2022-4w4-exer-2 Remi Gervais
 Author: Rémi Gervais
-Author URI: https://github.com/remiger/2022-4W4/tree/tp1
+Author URI: https://github.com/remiger/2022-4W4/tree/exer-2
 Description: Exercice 02 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
@@ -365,15 +365,15 @@ a:hover, a:active {
 
 .site__footer a {
   font-size: clamp(0.8rem, 2vw, 1.2rem);
-  color: yellow;
+  color: #1890ff;
 }
 
 .site__footer a:visited {
-  color: red;
+  color: #096dd9;
 }
 
 .site__footer a:hover, .site__footer a:focus, .site__footer a:active {
-  color: green;
+  color: #40a9ff;
 }
 
 .site__footer a:focus {
@@ -386,15 +386,15 @@ a:hover, a:active {
 
 .site__header a {
   font-size: clamp(0.8rem, 2vw, 1.2rem);
-  color: #bd6565;
+  color: #fff;
 }
 
 .site__header a:visited {
-  color: #e7a01d;
+  color: #fff;
 }
 
 .site__header a:hover, .site__header a:focus, .site__header a:active {
-  color: #46ce4c;
+  color: #a5a5a5;
 }
 
 .site__header a:focus {
@@ -578,12 +578,25 @@ COMPOSANTS
   font-size: clamp(0.5rem, 2vw, 1.2rem);
 }
 
-.site__footer section {
+.site__footer__colonne {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.site__footer__colonne > section {
+  max-width: 30%;
+}
+
+.site__footer__bas {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.site__footer section > * {
+.site__footer__bas > * {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
@@ -632,6 +645,7 @@ COMPOSANTS
   color: #f7f7f7;
   display: flex;
   align-items: center;
+  margin: 0 5px;
 }
 
 .site__header__titre a {
@@ -916,10 +930,7 @@ LAYOUT
   display: grid;
   gap: 10px;
   grid-template-columns: auto;
-  grid-template-areas: "sidebar"
- "header"
- "main"
- "footer";
+  grid-template-areas: "sidebar" "header" "main" "footer";
 }
 
 .home::after {
@@ -932,16 +943,14 @@ LAYOUT
   bottom: 0;
   left: 0;
   right: 0;
-  clip-path: polygon(88% 0, 100% 0%, 100% 100%, 49% 100%);
+  clip-path: polygon(88% 0, 100% 0%, 100% 100%, 70% 100%);
   background-color: #271d5c;
 }
 
 @media screen and (min-width: 768px) {
   .site {
     grid-template-columns: 300px auto;
-    grid-template-areas: "header header"
- "sidebar main"
- "footer footer";
+    grid-template-areas: "header header" "sidebar main" "footer footer";
   }
 }
 
