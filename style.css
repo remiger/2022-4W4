@@ -440,7 +440,7 @@ ANIMATIONS
   background-color: #00f;
   background-color: #00f;
   color: #fff;
-  animation: anim_bloc 1s 1s forwards;
+  animation: anim_bloc 1s 0s forwards;
 }
 
 @media screen and (max-width: 1000px) {
@@ -457,34 +457,28 @@ ANIMATIONS
   }
 }
 
-.animation__bloc:nth-of-type(1) {
-  transform: translateY(-100vh);
-  transition: transform 0.5s 3s;
+.animation__bloc:nth-child(1) {
+  transform: translateY(calc(100vh*1));
 }
 
-.animation__bloc:nth-of-type(2) {
-  transform: translateY(100vh);
-  transition: transform 0.5s 3s;
+.animation__bloc:nth-child(2) {
+  transform: translateY(calc(100vh*2));
 }
 
-.animation__bloc:nth-of-type(3) {
-  transform: translateX(-100vw);
-  transition: transform 0.5s 3s;
+.animation__bloc:nth-child(3) {
+  transform: translateY(calc(100vh*3));
 }
 
-.animation__bloc:nth-of-type(4) {
-  transform: translateX(100vw);
-  transition: transform 0.5s 3s;
+.animation__bloc:nth-child(4) {
+  transform: translateY(calc(100vh*4));
 }
 
-.animation__bloc:nth-of-type(5) {
-  transform: translateY(100vw);
-  transition: transform 0.5s 3s;
+.animation__bloc:nth-child(5) {
+  transform: translateY(calc(100vh*5));
 }
 
 @keyframes anim_bloc {
   0% {
-    transform: translateY(100vh);
   }
   100% {
     transform: translateY(0);
