@@ -3,6 +3,11 @@
     width: 80%;
     margin-bottom: 20px;
     &__input{
+        &:focus{
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            transition: 0.25s;
+        }
+        transition: 0.25s;
         padding: 15px 5px;
         height: 23px;
         border: none;
@@ -11,10 +16,6 @@
         background-color: $color__colorbackground-recherche;
         width: 100%;
         border-radius: 5px;
-    }
-
-    &__input:focus{
-        background-color: red;
     }
 
     &__bouton{
