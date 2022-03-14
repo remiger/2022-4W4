@@ -12,6 +12,11 @@
         width: 100%;
         border-radius: 5px;
     }
+
+    &__input:focus{
+        background-color: red;
+    }
+
     &__bouton{
         padding: 0;
         background-color: transparent;

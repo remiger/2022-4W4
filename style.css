@@ -384,24 +384,24 @@ a:hover, a:active {
   outline: 0;
 }
 
-.site__header a {
+.site__header a, .carte__titre a {
   font-size: clamp(0.8rem, 2vw, 1.2rem);
   color: #fff;
 }
 
-.site__header a:visited {
+.site__header a:visited, .carte__titre a:visited {
   color: #fff;
 }
 
-.site__header a:hover, .site__header a:focus, .site__header a:active {
+.site__header a:hover, .site__header a:focus, .site__header a:active, .carte__titre a:hover, .carte__titre a:focus, .carte__titre a:active {
   color: #a5a5a5;
 }
 
-.site__header a:focus {
+.site__header a:focus, .carte__titre a:focus {
   outline: thin dotted;
 }
 
-.site__header a:hover, .site__header a:active {
+.site__header a:hover, .site__header a:active, .carte__titre a:hover, .carte__titre a:active {
   outline: 0;
 }
 
@@ -490,6 +490,7 @@ COMPOSANTS
 --------------------------------------------------------- */
 .carte__titre {
   font-size: 1.4rem;
+  padding-top: 0;
   padding-bottom: 5px;
   border-bottom: 2px solid #73726e;
 }
@@ -826,7 +827,6 @@ COMPOSANTS
 }
 
 .site__main h2 {
-  padding-top: 20px;
   margin-left: 20px;
 }
 
@@ -876,6 +876,10 @@ COMPOSANTS
   background-color: rgba(255, 255, 255, 0.5);
   width: 100%;
   border-radius: 5px;
+}
+
+.recherche__input:focus {
+  background-color: red;
 }
 
 .recherche__bouton {
