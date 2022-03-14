@@ -790,6 +790,12 @@ COMPOSANTS
   list-style-type: none;
 }
 
+@media screen and (max-width: 768px) {
+  .menu:first-of-type {
+    margin-top: 50px;
+  }
+}
+
 .menu-item {
   margin: 0;
 }

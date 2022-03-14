@@ -59,6 +59,12 @@
     list-style-type: none;
 }
 
+.menu:first-of-type{
+    @media screen and (max-width: $largeur__media-tablette){
+        margin-top: 50px;
+    }
+}
+
 .menu-item{
     margin: 0;
     a{
