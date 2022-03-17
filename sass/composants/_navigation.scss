@@ -10,17 +10,29 @@
     position: absolute;
     top: 70px;
     left: 0;
-    
     transition: transform 0.3s;
-
-    @media screen and (min-width: $largeur__media-tablette){
-        display: none;
-    }
 
     svg{
         color: $color__texte__icones;
     }
 }
+
+@media screen and (min-width: $largeur__media-tablette){
+    .site #burger{
+        display: none;
+    }
+    .site .menu-principal-container{
+        display: block;
+    }
+    .home #burger{
+        display: block;
+    }
+    .home .menu-principal-container{
+        display: none;
+    }
+        
+}
+
 #chk-burger:checked ~ .menu-principal-container{
     display: block;
     animation-duration: 1s;

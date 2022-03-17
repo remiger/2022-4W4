@@ -50,6 +50,18 @@
         /* Register the 'primary' sidebar. */
         register_sidebar(
             array(
+                'id'            => 'entete_1',
+                'name'          => __( 'Entete 1' ),
+                'description'   => __( 'Ce sidebar s\'affiche dans l\'entete du site' ),
+                'before_widget' => '<div id="%1$s" class="widget %2$s">',
+                'after_widget'  => '</div>',
+                'before_title'  => '<h3 class="widget-title">',
+                'after_title'   => '</h3>',
+            )
+        );
+        /* Repeat register_sidebar() code for additional sidebars. */
+        register_sidebar(
+            array(
                 'id'            => 'footer_colonne_1',
                 'name'          => __( 'Footer colonne 1' ),
                 'description'   => __( 'Ce sidebar s\'affiche dans une colonne du pied de page' ),
@@ -59,7 +71,7 @@
                 'after_title'   => '</h3>',
             )
         );
-        /* Repeat register_sidebar() code for additional sidebars. */
+        
         register_sidebar(
             array(
                 'id'            => 'footer_colonne_2',

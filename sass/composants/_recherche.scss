@@ -39,3 +39,13 @@
         }
     }
 }
+
+.wp_recherche .wp-block-search__button{
+    background-image: url('https://s2.svgbox.net/octicons.svg?ic=search');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0;
+    height: 30px;
+    width: 30px;
+    border: none;
+}
