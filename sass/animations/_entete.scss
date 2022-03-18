@@ -1,10 +1,11 @@
 .animation{
     display: flex;
+    align-self: center;
     width: 90%;
-    border: 1px solid #f00;
     justify-content: space-around;
 
     &__bloc{
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -26,7 +27,7 @@
         }
     }
 
-    @for $i from 1 through 5 { 
+    @for $i from 1 through 7 { 
         &__bloc:nth-child(#{$i}) {
             transform: translateY(calc(100vh*#{$i}));
         }

@@ -42,7 +42,8 @@
         width: 100%;
     
         @media screen and (min-width: $largeur__media-tablette){
-            min-width: 400px;
+            margin-right: 5px;
+            min-width: 30%;
             align-items: flex-end;
             width: 25%;
             flex-direction: row;
