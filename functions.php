@@ -38,8 +38,8 @@
     function cidw_4w4_add_theme_support(){
         add_theme_support('post-thumbnails');
         add_theme_support( 'custom-logo', array(
-            'height' => 100,
-            'width'  => 100,
+            'height' => 88,
+            'width'  => 250,
         ) );
     }
     add_action('after_setup_theme', 'cidw_4w4_add_theme_support');
