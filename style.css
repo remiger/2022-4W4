@@ -531,6 +531,20 @@ COMPOSANTS
   background-color: #b7b6af;
 }
 
+.cours__carte img {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .cours__carte img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
 .cours__carte h2 {
   color: #f7f7f7;
   text-align: left;
@@ -983,12 +997,12 @@ LAYOUT
   z-index: -1;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 200%;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  clip-path: polygon(88% 0, 100% 0%, 100% 100%, 70% 100%);
+  clip-path: polygon(88% 0, 100% 0%, 100% 100%, 55% 100%);
   background-color: #271d5c;
 }
 
