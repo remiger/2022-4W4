@@ -8,7 +8,7 @@
 
 #burger{
     position: absolute;
-    top: 70px;
+    top: 50px;
     left: 0;
     transition: transform 0.3s;
 
@@ -46,7 +46,7 @@
 .menu-principal-container{
     display: none;
     overflow: hidden;
-    padding: 20px 0 0;
+    padding: 50px 0 0;
     transition: 0.5s;
     @media screen and (min-width: $largeur__media-tablette){
         display: block;
@@ -69,12 +69,6 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
-}
-
-.menu:first-of-type{
-    @media screen and (max-width: $largeur__media-tablette){
-        margin-top: 50px;
-    }
 }
 
 .menu-item{
