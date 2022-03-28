@@ -1,8 +1,16 @@
+// CSS POUR LA BARRE DE RECHERCHE
 .recherche{
     position: relative;
     width: 80%;
     margin-bottom: 20px;
+    
+    // LA BARRE DE RECHERCHE (INPUT)
     &__input{
+        &:focus{
+            background-color: rgba($color: #000000, $alpha: 0.2);
+            transition: 0.25s;
+        }
+        transition: 0.25s;
         padding: 15px 5px;
         height: 23px;
         border: none;
@@ -12,6 +20,8 @@
         width: 100%;
         border-radius: 5px;
     }
+
+    // LE BOUTON AVEC LA LOUPE
     &__bouton{
         padding: 0;
         background-color: transparent;
@@ -32,4 +42,14 @@
             height: auto;
         }
     }
+}
+
+.wp_recherche .wp-block-search__button{
+    background-image: url('https://s2.svgbox.net/octicons.svg?ic=search');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 0;
+    height: 30px;
+    width: 30px;
+    border: none;
 }

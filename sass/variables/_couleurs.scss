@@ -1,3 +1,4 @@
+// COULEURS SITE PRINCIPAL
 $color__background-body: rgb(227, 233, 236);
 $color__colorbackground-header: rgb(32,41,49);
 $color__colorbackground-barre: rgb(64, 75, 87);
@@ -7,6 +8,7 @@ $color__colorbackground-body-clip: rgb(39, 29, 92);
 $color__colorbackground-footer: rgb(21, 21, 21);
 $color__colorbackground-recherche: rgba(255, 255, 255, 0.5);
 
+// COULEURS DE TEXTE
 $color__texte__recherche: rgb(202, 209, 212);
 $color__texte__icones: rgb(167, 173, 181);
 $color__texte__defaut: rgb(247, 247, 247);
@@ -25,15 +27,16 @@ $color__link-hover: #00a;
 $color__background-link-hover: #aaa;
 
 /* ---------------- LIENS FOOTER */
-$color__link__footer: yellow;
-$color__link__footer-visited: red;
-$color__link__footer-hover: green;
+$color__link__footer: #1890ff;
+$color__link__footer-visited: #096dd9;
+$color__link__footer-hover: #40a9ff;
 
 /* ---------------- LIENS HEADER */
-$color__link__header : hsl(0, 40%, 57%);
-$color__link__header-hover : hsl(123, 58%, 54%);
-$color__link__header-visited : hsl(39, 81%, 51%);
+$color__link__header : #fff;
+$color__link__header-hover : rgb(165, 165, 165);
+$color__link__header-visited : #fff;
 
+// COULEURS PARAGRAPHES
 $p-couleur : #fff;
 $p-couleur__header : rgb(245, 245, 245);
 $p-couleur__footer : rgb(209, 209, 209);

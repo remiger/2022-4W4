@@ -3,7 +3,6 @@
     flex-direction: column;
     background-color: $color__colorbackground-formation;
     h2{
-        padding-top: 20px;
         margin-left: 20px;
     }
     p, h3{
@@ -26,4 +25,12 @@
             align-items: center;
         }
     }
+}
+
+.principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 20px;
 }
