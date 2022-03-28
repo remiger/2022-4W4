@@ -5,6 +5,8 @@
         array(),
         filemtime(get_template_directory() . '/style.css'),
         false);
+
+        wp_enqueue_style('cidw-4w4-google-font', "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap", false);
     }
 
     add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
@@ -14,7 +16,8 @@
         register_nav_menus( array(
                             'principal' => __( 'Menu principal', 'cidw_4w4' ),
                             'footer' => __('Menu pied de page', 'cidw-4w4'),
-                            'footer_colonne' => __('Menu footer colonne', 'cidw-4w4'))
+                            'footer_colonne' => __('Menu footer colonne', 'cidw-4w4'),
+                            'menu_cours' => __('Menu cours', 'cidw-4w4'))
                         );
     }
 

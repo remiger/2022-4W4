@@ -15,6 +15,9 @@ VARIABLES
 /* ---------------- LIENS DEFAUT */
 /* ---------------- LIENS FOOTER */
 /* ---------------- LIENS HEADER */
+/* --------- Boutons / liens */
+/* titre principal du site */
+/* titre secondaire */
 /* ---------------------------------------------------------
 INITIALISATION
 --------------------------------------------------------- */
@@ -420,6 +423,43 @@ p {
   color: whitesmoke;
 }
 
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h3, h4, h5 {
+  font-family: "Poppins", sans-serif;
+}
+
 /* ---------------------------------------------------------
 ANIMATIONS
 --------------------------------------------------------- */
@@ -497,6 +537,13 @@ ANIMATIONS
 /* ---------------------------------------------------------
 COMPOSANTS
 --------------------------------------------------------- */
+.cours {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 .carte__titre {
   font-size: 1.4rem;
   padding-top: 0;
@@ -510,13 +557,6 @@ COMPOSANTS
 
 .carte__description {
   font-size: 0.9rem;
-}
-
-.cours {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
 }
 
 .cours__carte {
@@ -659,7 +699,7 @@ COMPOSANTS
 }
 
 .site__header__titre {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #f7f7f7;
   display: flex;
   align-items: center;
@@ -846,6 +886,30 @@ COMPOSANTS
   background-color: #aaa;
 }
 
+/* -------------
+Navigation categorie cours
+---------------- */
+.menu-categorie_cours-container .menu {
+  display: flex;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  margin: 0 10px;
+  background-color: #155cdf;
+}
+
+.menu-categorie_cours-container .menu .menu-item a {
+  color: #ffe600;
+}
+
+.menu-categorie_cours-container .menu .menu-item:hover {
+  background-color: #0c5cf0;
+}
+
+.menu-categorie_cours-container .menu .menu-item:hover a {
+  color: #ebd447;
+}
+
 .formation {
   display: flex;
   flex-direction: column;
@@ -859,6 +923,34 @@ COMPOSANTS
 
 .formation__liste {
   padding: 0 20px 20px 20px;
+}
+
+.formation__liste .web {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe-bold");
+}
+
+.formation__liste .jeu {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
+}
+
+.formation__liste .comm {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=users");
+}
+
+.formation__liste .design {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
+}
+
+.formation__liste .utilitaire {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
+}
+
+.formation__liste .video {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
+}
+
+.formation__liste .creation-3d {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
 }
 
 .site__main {
@@ -907,7 +999,7 @@ COMPOSANTS
 
 .erreur-404 h1 {
   font-size: 5rem;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .recherche {

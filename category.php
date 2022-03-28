@@ -1,10 +1,18 @@
 <?php get_header() ?>
 <main class="site__main">
     <!-- <h1>------category.php------</h1> -->
+    <?php wp_nav_menu(array(
+        "menu" => "categorie_cours",
+        "container" => "nav")); ?>
     <?php if(have_posts()): ?>
         <section class="cours">
             <?php while(have_posts()): the_post(); ?>
-            <article class="cours__carte">
+            <?php 
+                $categories = get_the_category(); 
+                //var_dump($categories);
+                // echo $categories[1]->slug;
+            ?>
+            <article class="cours__carte" <?php echo $categories[1]->slug; ?>>
                 <?php
                     $titre = get_the_title();
                     $titreCourt = substr(get_the_title(), 8);

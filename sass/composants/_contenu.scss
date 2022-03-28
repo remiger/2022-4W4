@@ -1,8 +1,25 @@
 .cours{
+    //background-position: 97% 3%;
+    //background-repeat: no-repeat;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.carte__titre{
+    font-size: 1.4rem;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid $color__carte__bordure;
+}
+
+.carte__code{
+    font-size: 1rem;
+}
+
+.carte__description{
+    font-size: 0.9rem;
 }
 
 .cours__carte{

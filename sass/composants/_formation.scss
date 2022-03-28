@@ -8,5 +8,36 @@
     }
     &__liste{
         padding: 0 20px 20px 20px;
+
+        .web {
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=globe-bold');
+        }
+        .jeu{
+            background-image: url('https://s2.svgbox.net/materialui.svg?ic=games');
+            
+        }
+        .comm {
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=users');
+        }
+        .design {
+            background-image: url('https://s2.svgbox.net/materialui.svg?ic=color_lens');
+            // 3d https://s2.svgbox.net/materialui.svg?ic=view_in_ar
+            // palette peinture https://s2.svgbox.net/materialui.svg?ic=color_lens
+            // image https://s2.svgbox.net/octicons.svg?ic=image
+        }
+        .utilitaire{
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=tools-bold');
+        }
+        .video {
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=device-camera-video');
+            //https://s2.svgbox.net/materialui.svg?ic=movie
+            //camera https://s2.svgbox.net/materialui.svg?ic=voice_chat
+            // camera video https://s2.svgbox.net/octicons.svg?ic=device-camera-video
+            // video https://s2.svgbox.net/materialui.svg?ic=duo
+        }
+        .creation-3d {
+            background-image: url('https://s2.svgbox.net/materialui.svg?ic=view_in_ar');
+        }
     }
+
 }
