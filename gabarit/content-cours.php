@@ -2,7 +2,7 @@
                 //$categories = get_the_category(); 
                 //var_dump($categories);
                 // echo $categories[1]->slug;
-            ?>
+    ?>
 
 <h2 class="formation__titre">Liste des cours du programme TIM</h2>
         <div class="formation__liste">
