@@ -1,17 +1,14 @@
 <?php get_header() ?>
 <main class="site__main">
     <!-- <h1>------category.php------</h1> -->
+    <?php if(is_category(array('cours', 'creation-3d', 'web', 'jeu', 'design', 'utilitaire', 'video'))) : ?>
     <?php wp_nav_menu(array(
         "menu" => "categorie_cours",
         "container" => "nav")); ?>
     <?php if(have_posts()): ?>
         <section class="cours">
             <?php while(have_posts()): the_post(); ?>
-            <?php 
-                $categories = get_the_category(); 
-                //var_dump($categories);
-                // echo $categories[1]->slug;
-            ?>
+            <?php get_template_part('gabarit/content', 'cours') ?>
             <article class="cours__carte <?= $categories[1]->slug; ?>">
                 <?php
                     $titre = get_the_title();
@@ -35,5 +32,6 @@
             <?php endwhile; ?>
         </section>
     <?php endif; ?>
+    <?php endif; ?><!-- if is category cours -->
 </main>
 <?php get_footer() ?>

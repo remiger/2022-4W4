@@ -577,18 +577,18 @@ COMPOSANTS
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
 }
 
-.carte__titre {
+.cours__titre {
   font-size: 1.4rem;
   padding-top: 0;
   padding-bottom: 5px;
-  border-bottom: 2px solid #73726e;
+  border-bottom: 2px solid #f4f4ff;
 }
 
-.carte__code {
+.cours__code {
   font-size: 1rem;
 }
 
-.carte__description {
+.cours__description {
   font-size: 0.9rem;
 }
 
@@ -621,6 +621,7 @@ COMPOSANTS
 .cours__carte h2 {
   color: #f7f7f7;
   text-align: left;
+  margin-right: 20px;
   font-size: clamp(0.5rem, 3vw, 1.4rem);
 }
 
@@ -955,7 +956,15 @@ Navigation categorie cours
 }
 
 .formation__liste {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   padding: 0 20px 20px 20px;
+}
+
+.formation__liste * {
+  background-position: 97% 3%;
+  background-repeat: no-repeat;
 }
 
 .formation__liste .web {
@@ -984,6 +993,87 @@ Navigation categorie cours
 
 .formation__liste .creation-3d {
   background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
+}
+
+.formation__liste .formation__cours {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  border-radius: 10px;
+  transition: 0.5s;
+  max-width: 45%;
+  margin: 6px 3px;
+  border: 2px solid #f4f4ff;
+  background-color: #b7b6af;
+}
+
+.formation__liste .formation__cours img {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+  .formation__liste .formation__cours img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.formation__liste .formation__cours h2 {
+  color: #f7f7f7;
+  text-align: left;
+  margin-right: 20px;
+  font-size: clamp(0.5rem, 3vw, 1.4rem);
+}
+
+.formation__liste .formation__cours p {
+  margin: 5px 0;
+  font-size: clamp(0.5rem, 2vw, 1.2rem);
+}
+
+.formation__liste .formation__cours p:nth-of-type(1), .formation__liste .formation__cours .cours__carte p:nth-of-type(2) {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 768px) {
+  .formation__liste .formation__cours {
+    margin: 10px;
+    max-width: 45%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .formation__liste .formation__cours {
+    height: auto;
+    max-width: 30%;
+  }
+}
+
+.formation__liste .cours__titre {
+  font-size: 1.4rem;
+  padding-top: 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #f4f4ff;
+}
+
+.formation__liste .cours__description {
+  font-size: 0.9rem;
+}
+
+.formation__liste .formation__cours:nth-of-type(even) {
+  background-color: #cecdc5;
+}
+
+.formation__liste .formation__cours:hover {
+  box-shadow: 5px 10px 15px rgba(233, 233, 233, 0.6);
+  border-radius: 0px;
+  transition: 0.5s;
+}
+
+.formation__liste .article__contenu {
+  display: flex;
 }
 
 .site__main {
@@ -1020,6 +1110,16 @@ Navigation categorie cours
     flex-direction: column;
     align-items: center;
   }
+}
+
+.site__main .menu-categorie_cours-container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.site__main .menu-categorie_cours-container li {
+  margin: 3px;
+  border-radius: 4px;
 }
 
 .principal {

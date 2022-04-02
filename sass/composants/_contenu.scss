@@ -42,18 +42,18 @@
 
 
 
-.carte__titre{
+.cours__titre{
     font-size: 1.4rem;
     padding-top: 0;
     padding-bottom: 5px;
-    border-bottom: 2px solid $color__carte__bordure;
+    border-bottom: 2px solid $color__cours__bordure;
 }
 
-.carte__code{
+.cours__code{
     font-size: 1rem;
 }
 
-.carte__description{
+.cours__description{
     font-size: 0.9rem;
 }
 
@@ -80,6 +80,7 @@
     h2{
         color: $color__texte__defaut;
         text-align: left;
+        margin-right: 20px;
         font-size: clamp(0.5rem, 3vw, 1.4rem);
     }
 
