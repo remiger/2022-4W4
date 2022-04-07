@@ -1,30 +1,23 @@
-<?php 
-                //$categories = get_the_category(); 
-                //var_dump($categories);
-                // echo $categories[1]->slug;
-    ?>
+<?php $categories = get_the_category(); ?>
+<article class="cours__carte <?= $categories[1]->slug; ?>">
+    <?php
+        $titre = get_the_title();
+        $titreCourt = substr(get_the_title(), 8);
+        $titreCourt = substr($titreCourt, 0, strrpos($titreCourt, '('));
 
-<h2 class="formation__titre">Liste des cours du programme TIM</h2>
-        <div class="formation__liste">
-            <?php if (have_posts()):
-                while (have_posts()): the_post(); ?>
-                <?php $categories = get_the_category();  ?>
-                <article class="formation__cours  <?= $categories[1]->slug; ?>">
-                        <?php
-                        $titre = get_the_title();
-                        $titreFiltreCours = substr($titre, 7, -6);
-                        $nbHeures = substr($titre, -6);
-                        $sigleCours = substr($titre, 0, 7);
-                        $descCours = get_the_excerpt();
-                        ?>
-                        <h3 class="cours__titre"> <?= $titreFiltreCours; ?></h3>
-                        <div class="cours__nbre-heure"><?= $nbHeures; ?></div>
-                        <p class="cours__sigle"><?= $sigleCours; ?> </p>
-                        <p class="cours__desc"> <?= $descCours; ?></p>
-                    </article>
-                <?php endwhile ?>
-                <?php endif ?>
-        </div>
-    </section>
-</main>
-<?php get_footer() ?>
+        // $posDebutHeures = strrpos($titre, '(') + 1;
+        // $posFinHeures = strrpos($titre, ')');
+        // $nbHeures = substr($titre, $posDebutHeures, $posFinHeures - $posDebutHeures);
+
+        $nbHeures = get_field("nombre_dheures");
+    ?>
+    <h2 class="carte__titre">
+        <a href="<?= get_permalink(); ?>">
+            <?= $titreCourt; ?>
+        </a>
+    </h2>
+    <?php the_post_thumbnail("thumbnail"); ?>
+    <p class="carte__code"><?= substr(get_the_title(), 0, 7) ?></p>
+    <p><?= $nbHeures; ?>h</p>
+    <p class="carte__description"><?= get_the_excerpt() ?></p>
+</article>
