@@ -10,6 +10,11 @@
     <div class="animation__bloc">I</div>
     <div class="animation__bloc">L</div>
 </section>
+    <h1>Les etudes en tim</h1>
+    <?php wp_nav_menu(array("menu" => "menu_accueil",
+    "container" => "nav")); ?>
+    <?php wp_nav_menu(array("menu" => "evenement",
+    "container" => "nav")); ?>
     <?php if (have_posts()):the_post(); ?>
     <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>

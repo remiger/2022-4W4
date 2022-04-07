@@ -5,6 +5,8 @@
         array(),
         filemtime(get_template_directory() . '/style.css'),
         false);
+
+        wp_enqueue_style('cidw-4w4-google-font', "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap", false);
     }
 
     add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
@@ -14,11 +16,25 @@
         register_nav_menus( array(
                             'principal' => __( 'Menu principal', 'cidw_4w4' ),
                             'footer' => __('Menu pied de page', 'cidw-4w4'),
-                            'footer_colonne' => __('Menu footer colonne', 'cidw-4w4'))
+                            'footer_colonne' => __('Menu footer colonne', 'cidw-4w4'),
+                            'menu_cours' => __('Menu cours', 'cidw-4w4'),
+                            'menu_accueil' => __('Menu accueil', 'cidw-4w4'))
                         );
     }
 
     add_action( "after_setup_theme", "cidw_4w4_enregistre_menu" );
+
+    /* ---------------------------------------------------- afficher une description de choix de menu */
+    /* Cette nouvelle version permet de ne pas avoir de warning */
+    function prefix_nav_description( $item_output, $item) {
+        if ( !empty( $item->description ) ) {
+            $item_output = str_replace( '</a>',
+            '<hr><span class="menu-item-description">' . $item->description . '</span><div class="menu-item-icone"></div></a>',
+                $item_output );
+        }
+        return $item_output;
+    }
+    add_filter( 'walker_nav_menu_start_el', 'prefix_nav_description', 10, 2 ); 
 
     function cidw_4w4_filtre_menu_item($monObjet){
         // var_dump($monObjet);
@@ -105,6 +121,48 @@
                 'after_title'   => '</h3>',
             )
         );
+    }
+
+    /**
+     * $query contient la requête « mysql » qui permet d'extraire le contenu de la nouvelle page que l'on tente d'accéder
+     * @param : WP_Query $query
+    */
+    function cidw_4w4_pre_get_posts(WP_Query $query)
+    {
+        if (is_admin() || !is_main_query() || !is_category(array('cours', 'web', 'jeu', 'design', 'video', 'utilitaire', 'creation-3d'))) {
+            return $query;
+        }
+        else{
+            $query->set('posts_per_page', -1);
+            $ordre = get_query_var('ordre');
+            $cle = get_query_var('cletri');
+            $query->set('ordre', $ordre);
+            $query->set('orderby', $cle);
+
+            return $query;
+        }
+        
+    }
+
+    function cidw_4w4_query_vars($params){
+        $params[] = "cletri";
+        $params[] = "ordre";
+        //$params["cletri"] = "title";
+        //var_dump($params); die();
+        return $params;
+    }
+    add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
+    add_filter('query_vars', 'cidw_4w4_query_vars' );
+
+    /**
+     * Extraire le slug de la categorie de l'URL
+     * @param array $tableau : liste des slugs de categories de la page 
+     * @return string $slug : le slug de la categorie
+     */
+    function trouve_la_categorie($tableau){
+        foreach($tableau as $cle){
+            if(is_category($cle)) return($cle);
+        }
     }
 
 ?>

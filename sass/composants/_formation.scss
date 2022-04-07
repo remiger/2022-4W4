@@ -7,6 +7,121 @@
         margin-left: 20px;
     }
     &__liste{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         padding: 0 20px 20px 20px;
+
+        *{
+            background-position: 97% 3%;
+            background-repeat: no-repeat;
+        }
+        .web {
+    
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=globe-bold');
+        }
+        .jeu{
+            background-image: url('https://s2.svgbox.net/materialui.svg?ic=games');
+            
+        }
+        .comm {
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=users');
+        }
+        .design {
+            background-image: url('https://s2.svgbox.net/materialui.svg?ic=color_lens');
+            // 3d https://s2.svgbox.net/materialui.svg?ic=view_in_ar
+            // palette peinture https://s2.svgbox.net/materialui.svg?ic=color_lens
+            // image https://s2.svgbox.net/octicons.svg?ic=image
+        }
+        .utilitaire{
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=tools-bold');
+        }
+        .video {
+            background-image: url('https://s2.svgbox.net/octicons.svg?ic=device-camera-video');
+            //https://s2.svgbox.net/materialui.svg?ic=movie
+            //camera https://s2.svgbox.net/materialui.svg?ic=voice_chat
+            // camera video https://s2.svgbox.net/octicons.svg?ic=device-camera-video
+            // video https://s2.svgbox.net/materialui.svg?ic=duo
+        }
+        .creation-3d {
+            background-image: url('https://s2.svgbox.net/materialui.svg?ic=view_in_ar');
+        }
+
+        .formation__cours{
+            display: flex;
+            flex-direction: column;
+            padding: 0 10px;
+            border-radius: 10px;
+            transition: 0.5s;
+            max-width: 45%;
+            margin: 6px 3px;
+        
+            img{
+                width: 150px;
+                height: 150px;
+                align-self: center;
+                margin-bottom: 5px;
+                @media screen and (max-width: $largeur__media-tablette){
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+        
+            h2{
+                color: $color__texte__defaut;
+                text-align: left;
+                margin-right: 20px;
+                font-size: clamp(0.5rem, 3vw, 1.4rem);
+            }
+        
+            p{
+                margin: 5px 0;
+                font-size: clamp(0.5rem, 2vw, 1.2rem);
+            }
+        
+            p:nth-of-type(1), .cours__carte p:nth-of-type(2){
+                font-weight: bold;
+            }
+        
+            @media screen and (min-width: $largeur__media-tablette){
+                margin: 10px;
+                max-width: 45%;
+            }
+            @media screen and (min-width: $largeur__media-desktop){
+                height: auto;
+                max-width: 30%;
+            }
+        
+            border: 2px solid $color__cours__bordure;
+            background-color: $color__cours__background;
+        }
+
+        .cours__titre{
+            font-size: 1.4rem;
+            padding-top: 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid $color__cours__bordure;
+        }
+
+        .cours__description{
+            font-size: 0.9rem;
+        }
+
+        .formation__cours:nth-of-type(even){
+            background-color: $color__cours__background-pair;
+        }
+
+        .formation__cours:hover{
+            box-shadow: 5px 10px 15px $color__cours__shadow;
+            border-radius: 0px;
+            transition: 0.5s;
+        }
+
+        .article{
+            &__contenu{
+                display: flex;
+            }
+        }
     }
+
 }
