@@ -2,7 +2,7 @@
 <article class="cours__carte <?= $categories[1]->slug; ?>">
     <?php
         $titre = get_the_title();
-        $titreCourt = substr(get_the_title(), 8);
+        $titreCourt = substr(get_the_title(), 3);
         $titreCourt = substr($titreCourt, 0, strrpos($titreCourt, '('));
 
         // $posDebutHeures = strrpos($titre, '(') + 1;
@@ -17,7 +17,7 @@
         </a>
     </h2>
     <?php the_post_thumbnail("thumbnail"); ?>
-    <p class="carte__code"><?= substr(get_the_title(), 0, 7) ?></p>
+    <p class="carte__code"><?= substr(get_the_title(), 0, 3) ?></p>
     <p><?= $nbHeures; ?>h</p>
     <p class="carte__description"><?= get_the_excerpt() ?></p>
 </article>
