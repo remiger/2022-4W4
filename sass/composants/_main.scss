@@ -34,6 +34,18 @@
             border-radius: 4px;
         }
     }
+
+    .ordre-cours{
+        background-color: $color__bouton__background;
+        padding: 10px;
+        color: $color__bouton__color;
+        
+
+        &:hover{
+            background-color: $color__bouton__background--hover;    
+            color: $color__bouton__color--hover;
+        }
+    }
 }
 
 .principal{

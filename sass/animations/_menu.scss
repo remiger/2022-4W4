@@ -1,5 +1,4 @@
-.menu-menu_accueil-container,
-.menu-evenement-container{
+.menu-menu_accueil-container{
     .menu{
         @for $i from 1 through 4 { 
             &-item:nth-child(#{$i}) {
@@ -12,6 +11,29 @@
         }
     
         @keyframes anim_menu{
+            0%{
+                
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.menu-evenement-container{
+    .menu{
+        @for $i from 1 through 4 { 
+            &-item:nth-child(#{$i}) {
+                transform: translateX(calc(150vw*#{$i}));
+            }
+        }
+    
+        &-item{
+            animation: anim_menu_2 1.5s 1s forwards;
+        }
+    
+        @keyframes anim_menu_2{
             0%{
                 
             }
