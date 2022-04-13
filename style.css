@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /**
-Theme name: 2022-4w4 TP1 Remi Gervais
+Theme name: 2022-4w4 Exercice-3 Remi Gervais
 Author: Rémi Gervais
 Author URI: https://github.com/remiger/2022-4W4/
-Description: TP1 dans le cadre du cours 4W4
+Description: Exercice 3 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -928,7 +928,6 @@ Navigation categorie cours
 }
 
 .menu-categorie_cours-container .menu .menu-item {
-  margin: 0 10px;
   background-color: #155cdf;
 }
 
@@ -942,6 +941,14 @@ Navigation categorie cours
 
 .menu-categorie_cours-container .menu .menu-item:hover a {
   color: #ebd447;
+}
+
+.menu-categorie_cours-container .menu .current-menu-item {
+  background-color: #000202;
+}
+
+.menu-categorie_cours-container .menu .current-menu-item a {
+  color: #f0f0f0;
 }
 
 .formation {
@@ -1202,6 +1209,59 @@ Navigation categorie cours
 
 .site__barre .menu a svg {
   padding-right: 10px;
+}
+
+.principal .menu-menu_accueil-container,
+.principal .menu-evenement-container {
+  width: 100%;
+  padding-right: 20px;
+  margin-bottom: 30px;
+}
+
+.principal .menu-menu_accueil-container .menu,
+.principal .menu-evenement-container .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.principal .menu-menu_accueil-container .menu hr,
+.principal .menu-evenement-container .menu hr {
+  display: none;
+}
+
+.principal .menu-menu_accueil-container .menu .menu-item,
+.principal .menu-evenement-container .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #155cdf;
+  flex: 0 0 20%;
+  min-height: 150px;
+  min-width: 20%;
+  border-radius: 5px;
+}
+
+.principal .menu-menu_accueil-container .menu .menu-item a,
+.principal .menu-evenement-container .menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(1rem, 2vw, 2.2rem);
+  color: #ffe600;
+  height: 100%;
+  width: 100%;
+}
+
+.principal .menu-menu_accueil-container .menu .menu-item a .menu-item-description,
+.principal .menu-evenement-container .menu .menu-item a .menu-item-description {
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.principal .menu-menu_accueil-container .menu .menu-item-description,
+.principal .menu-evenement-container .menu .menu-item-description {
+  margin-top: 10px;
 }
 
 /* ---------------------------------------------------------

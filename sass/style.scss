@@ -1,8 +1,8 @@
 /**
-Theme name: 2022-4w4 TP1 Remi Gervais
+Theme name: 2022-4w4 Exercice-3 Remi Gervais
 Author: Rémi Gervais
 Author URI: https://github.com/remiger/2022-4W4/
-Description: TP1 dans le cadre du cours 4W4
+Description: Exercice 3 dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -48,7 +48,8 @@ COMPOSANTS
 @import "composants/404";
 @import "composants/recherche";
 @import "composants/barre";
-@import "composants/navigation_accueil.scss";
+@import "composants/navigation_accueil";
+
 
 /* ---------------------------------------------------------
 LAYOUT

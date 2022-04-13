@@ -5,7 +5,6 @@ Navigation categorie cours
     .menu{ //ul
         display: flex;
         .menu-item{ // li
-            margin: 0 10px;
             background-color: $color__bouton__background;
             a{
                 color: $color__bouton__color;
