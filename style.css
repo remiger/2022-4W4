@@ -534,6 +534,34 @@ ANIMATIONS
   }
 }
 
+.menu-item:nth-child(1) {
+  transform: translateX(calc(100vw*1));
+}
+
+.menu-item:nth-child(2) {
+  transform: translateX(calc(100vw*2));
+}
+
+.menu-item:nth-child(3) {
+  transform: translateX(calc(100vw*3));
+}
+
+.menu-item:nth-child(4) {
+  transform: translateX(calc(100vw*4));
+}
+
+.menu-item {
+  animation: anim_menu 1.5s 0.7s forwards;
+}
+
+@keyframes anim_menu {
+  0% {
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /* ---------------------------------------------------------
 COMPOSANTS
 --------------------------------------------------------- */
@@ -1238,7 +1266,7 @@ Navigation categorie cours
   align-items: center;
   background-color: #155cdf;
   flex: 0 0 20%;
-  min-height: 150px;
+  min-height: 100px;
   min-width: 20%;
   border-radius: 5px;
 }
@@ -1252,6 +1280,7 @@ Navigation categorie cours
   color: #ffe600;
   height: 100%;
   width: 100%;
+  padding: 10px;
 }
 
 .principal .menu-menu_accueil-container .menu .menu-item a .menu-item-description,
@@ -1262,6 +1291,10 @@ Navigation categorie cours
 .principal .menu-menu_accueil-container .menu .menu-item-description,
 .principal .menu-evenement-container .menu .menu-item-description {
   margin-top: 10px;
+}
+
+.home {
+  overflow-x: hidden;
 }
 
 /* ---------------------------------------------------------
