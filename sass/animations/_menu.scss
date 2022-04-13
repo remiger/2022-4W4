@@ -1,20 +1,23 @@
-.menu{
-    @for $i from 1 through 4 { 
-        &-item:nth-child(#{$i}) {
-            transform: translateX(calc(100vw*#{$i}));
+.menu-menu_accueil-container,
+.menu-evenement-container{
+    .menu{
+        @for $i from 1 through 4 { 
+            &-item:nth-child(#{$i}) {
+                transform: translateX(calc(100vw*#{$i}));
+            }
         }
-    }
-
-    &-item{
-        animation: anim_menu 1.5s 0.7s forwards;
-    }
-
-    @keyframes anim_menu{
-        0%{
-            
+    
+        &-item{
+            animation: anim_menu 1.5s 0.7s forwards;
         }
-        100%{
-            transform: translateX(0);
+    
+        @keyframes anim_menu{
+            0%{
+                
+            }
+            100%{
+                transform: translateX(0);
+            }
         }
     }
 }

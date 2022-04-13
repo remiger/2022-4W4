@@ -534,23 +534,28 @@ ANIMATIONS
   }
 }
 
-.menu-item:nth-child(1) {
+.menu-menu_accueil-container .menu-item:nth-child(1),
+.menu-evenement-container .menu-item:nth-child(1) {
   transform: translateX(calc(100vw*1));
 }
 
-.menu-item:nth-child(2) {
+.menu-menu_accueil-container .menu-item:nth-child(2),
+.menu-evenement-container .menu-item:nth-child(2) {
   transform: translateX(calc(100vw*2));
 }
 
-.menu-item:nth-child(3) {
+.menu-menu_accueil-container .menu-item:nth-child(3),
+.menu-evenement-container .menu-item:nth-child(3) {
   transform: translateX(calc(100vw*3));
 }
 
-.menu-item:nth-child(4) {
+.menu-menu_accueil-container .menu-item:nth-child(4),
+.menu-evenement-container .menu-item:nth-child(4) {
   transform: translateX(calc(100vw*4));
 }
 
-.menu-item {
+.menu-menu_accueil-container .menu-item,
+.menu-evenement-container .menu-item {
   animation: anim_menu 1.5s 0.7s forwards;
 }
 
@@ -951,15 +956,31 @@ COMPOSANTS
 /* -------------
 Navigation categorie cours
 ---------------- */
+.menu-categorie_cours-container {
+  width: 100%;
+}
+
 .menu-categorie_cours-container .menu {
   display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .menu-categorie_cours-container .menu .menu-item {
+  max-width: 13%;
   background-color: #155cdf;
 }
 
+@media screen and (max-width: 768px) {
+  .menu-categorie_cours-container .menu .menu-item {
+    max-width: 23%;
+  }
+}
+
 .menu-categorie_cours-container .menu .menu-item a {
+  padding: 10px;
+  width: 100%;
+  height: 100%;
   color: #ffe600;
 }
 
@@ -972,11 +993,11 @@ Navigation categorie cours
 }
 
 .menu-categorie_cours-container .menu .current-menu-item {
-  background-color: #000202;
+  background-color: #073fa8;
 }
 
 .menu-categorie_cours-container .menu .current-menu-item a {
-  color: #f0f0f0;
+  color: #ffecaf;
 }
 
 .formation {
