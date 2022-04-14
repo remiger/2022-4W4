@@ -2,12 +2,23 @@
 Navigation categorie cours
 ---------------- */
 .menu-categorie_cours-container{
+    width: 100%;
     .menu{ //ul
         display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
         .menu-item{ // li
-            margin: 0 10px;
+            max-width: 13%;
+
+            @media screen and (max-width: $largeur__media-tablette){
+                max-width: 23%;
+            }
+
             background-color: $color__bouton__background;
             a{
+                padding: 10px;
+                width: 100%;
+                height: 100%;
                 color: $color__bouton__color;
             }
             &:hover{

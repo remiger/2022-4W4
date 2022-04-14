@@ -1,8 +1,8 @@
 <?php get_header() ?>
 <main class="site__main">
     <!-- <h1>------category.php------</h1> -->
-    <a href="?cletri=title&ordre=asc">Tri ascendant</a>
-    <a href="?cletri=title&ordre=desc">Tri descendant</a>
+    <a class="ordre-cours" href="?cletri=title&ordre=asc">Tri ascendant</a>
+    <a class="ordre-cours" href="?cletri=title&ordre=desc">Tri descendant</a>
     <?php if(is_category(array('cours', 'creation-3d', 'web', 'jeu', 'design', 'utilitaire', 'video'))) : ?>
     <?php wp_nav_menu(array(
         "menu" => "categorie_cours",

@@ -1,12 +1,15 @@
-# TP1 4W4 2022 - Rémi Gervais
+# Exercice 3 4W4 2022 - Rémi Gervais
 
 ## Description du TP
 Développer un site constitué de plusieurs modèles qui permettront d’afficher dans un design original les pages suivantes :
 
 ### Une page d’accueil personnalisée
 La page contiendra plusieurs animations permettant d’introduire et de souligner les principaux objectifs du site « Les cours du TIM »
+o	Deux menus de blocs de navigations 
+
 ### Une page de l’ensemble des cours du TIM
 Le design amélioré de la grille de cours contiendra des filtres permettant d’afficher les cours dans un ordre spécifique (par session, par type de cours …). Chacune des cartes de cours permet d’accéder à une description complète du cours.
+
 ### Une page pour chacun des cours du TIM
 Le design amélioré de la page de cours permettra de mettre en valeur différentes caractéristique d’un cours : 
 o	La durée du cours
