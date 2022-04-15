@@ -19,7 +19,7 @@
             <?php get_template_part('gabarit/content', 'cours') ?>
             <?php endwhile; ?>
         </section>
-    <?php endif; ?>
+    <?php endif; ?> 
     <?php endif; ?><!-- if is category cours -->
 </main>
 <?php get_footer() ?>
