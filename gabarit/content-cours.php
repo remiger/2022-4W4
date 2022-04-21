@@ -4,7 +4,7 @@
         $titre = get_the_title();
         $titreCourt = substr(get_the_title(), 3);
         $titreCourt = substr($titreCourt, 0, strrpos($titreCourt, '('));
-        $descCours = wp_trim_words(get_the_content(), 15, "<a href='#'> La suite </a>;");
+        $descCours = wp_trim_words(get_the_content(), 15, "<button class='cours__desc__ouvrir'> La suite </button>");
 
         // $posDebutHeures = strrpos($titre, '(') + 1;
         // $posFinHeures = strrpos($titre, ')');
@@ -21,6 +21,6 @@
     <?php the_post_thumbnail("thumbnail"); ?>
     <p class="carte__code"><?= substr(get_the_title(), 0, 3) ?></p>
     <p><?= $nbHeures; ?>h</p>
-    <p class="carte__description"><?= get_the_excerpt() ?></p>
+    <p class="carte__description"><?= $descCours ?></p>
     <p class="cours__departement"><?= $departement ?></p>
 </article>
