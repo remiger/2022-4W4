@@ -1352,6 +1352,29 @@ Navigation categorie cours
   overflow-x: hidden;
 }
 
+.boite__modale {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  border: 5px solid #aaa;
+  background-color: #f00;
+  width: 50%;
+  height: 50%;
+  transform: scale(0.1);
+  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+@media screen and (max-width: 768px) {
+  .boite__modale {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.boite__modale:hover {
+  transform: scale(1);
+}
+
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
