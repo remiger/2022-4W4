@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /**
-Theme name: 2022-4w4 Exercice-3 Remi Gervais
+Theme name: 2022-4w4 Labo-06 Remi Gervais
 Author: Rémi Gervais
 Author URI: https://github.com/remiger/2022-4W4/
 Description: Exercice 3 dans le cadre du cours 4W4
@@ -656,8 +656,15 @@ COMPOSANTS
   transition: 0.5s;
   max-width: 45%;
   margin: 6px 3px;
+  text-align: justify;
   border: 2px solid #f4f4ff;
   background-color: #b7b6af;
+}
+
+.cours__carte .cours__desc__ouvrir {
+  border: none;
+  border-radius: 4px;
+  margin-left: 5px;
 }
 
 .cours__carte img {

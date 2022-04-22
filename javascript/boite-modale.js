@@ -8,8 +8,11 @@
         bout.addEventListener('mousedown', function(){
             //console.log(this.parentNode.parentNode.className);
             boite__modale.classList.add("ouvrir");
-            console.log(boite__modale.classList);
         })
     }
     
+    boite__modale__fermeture.addEventListener('mousedown', function(){
+        boite__modale.classList.remove("ouvrir");
+    });
+
 })()

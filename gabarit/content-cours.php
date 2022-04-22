@@ -4,7 +4,7 @@
         $titre = get_the_title();
         $titreCourt = substr(get_the_title(), 3);
         $titreCourt = substr($titreCourt, 0, strrpos($titreCourt, '('));
-        $descCours = wp_trim_words(get_the_content(), 15, "<button class='cours__desc__ouvrir'> La suite </button>");
+        $descCours = wp_trim_words(get_the_content(), 15, "<button class='cours__desc__ouvrir'> ... la suite </button>");
 
         // $posDebutHeures = strrpos($titre, '(') + 1;
         // $posFinHeures = strrpos($titre, ')');
