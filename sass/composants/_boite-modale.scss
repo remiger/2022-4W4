@@ -1,0 +1,32 @@
+.boite__modale{
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    border: 5px solid #aaa;
+    background-color: #f00;
+    width: 50%;
+    height: 50%;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    // Media queries pour mobile
+    @media screen and (max-width: $largeur__media-tablette){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    // &__fermeture{
+
+    // }
+    // &__texte{
+
+    // }
+}
+
+.ouvrir{
+    transform: scale(1);
+}

@@ -1,4 +1,6 @@
 <?php
+    require_once("options/apparence.php");
+
     function cidw_4w4_enqueue(){
         wp_enqueue_style('main-styles', 
         get_template_directory_uri() . '/style.css',
@@ -7,6 +9,11 @@
         false);
 
         wp_enqueue_style('cidw-4w4-google-font', "https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&family=Roboto+Slab:wght@400;700&family=Roboto:wght@400;700&display=swap", false);
+
+        wp_enqueue_script('cidw-4w4-boite-modale',
+        get_template_directory_uri() . '/javascript/boite-modale.js',
+        array(), filemtime(get_template_directory() . '/javascript/boite-modale.js'),
+        true); // true pour intergrer le js en bas du document
     }
 
     add_action("wp_enqueue_scripts", "cidw_4w4_enqueue");
