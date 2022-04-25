@@ -1,4 +1,6 @@
 <?php
+    require_once("options/apparence.php");
+
     function cidw_4w4_enqueue(){
         wp_enqueue_style('main-styles', 
         get_template_directory_uri() . '/style.css',

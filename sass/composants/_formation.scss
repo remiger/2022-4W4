@@ -6,6 +6,11 @@
         padding-top: 20px;
         margin-left: 20px;
     }
+
+    &__cours__invisible{
+        display: none;
+    }
+
     &__liste{
         display: flex;
         flex-direction: row;
