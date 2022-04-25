@@ -667,6 +667,10 @@ COMPOSANTS
   margin-left: 5px;
 }
 
+.cours__carte .cours__departement {
+  margin-top: auto;
+}
+
 .cours__carte img {
   width: 150px;
   height: 150px;
