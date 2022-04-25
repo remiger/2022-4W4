@@ -2,12 +2,18 @@
     position: fixed;
     top: 25%;
     left: 25%;
-    border: 5px solid #aaa;
-    background-color: #f00;
+    border: 5px solid $color__boite__modale__bordure;
+    background-color: $color__boite__modale__fond;
     width: 50%;
     height: 50%;
     transform: scale(0);
     transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    p{
+        text-align: justify;
+        padding: 10px;
+        color: $color__boite__modale__texte;
+    }
 
     // Media queries pour mobile
     @media screen and (max-width: $largeur__media-tablette){
