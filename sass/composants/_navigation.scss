@@ -2,15 +2,15 @@
     display: none;
 }
 
-#chk-burger:checked ~ #burger{
-    transform: rotate(90deg);
-}
+// #chk-burger:checked ~ #burger{
+//     transform: rotate(90deg);
+// }
 
 #burger{
-    position: absolute;
+    // position: absolute;
     top: 50px;
     left: 0;
-    transition: transform 0.3s;
+    // transition: transform 0.3s;
 
     svg{
         color: $color__texte__icones;
