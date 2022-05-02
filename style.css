@@ -1434,6 +1434,18 @@ Navigation categorie cours
   transform: scale(1);
 }
 
+.home .site__main {
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .wp-block-gallery {
+    margin-right: 20px;
+    width: 85%;
+  }
+}
+
 /* ---------------------------------------------------------
 LAYOUT
 --------------------------------------------------------- */
