@@ -1464,6 +1464,27 @@ Navigation categorie cours
   height: 100%;
 }
 
+.boite__carrousel__navigation {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.boite__carrousel__navigation button {
+  width: 20px;
+  height: 20px;
+  margin: 20px 10px;
+  border-radius: 100%;
+}
+
+.boite__carrousel__navigation button:focus {
+  background-color: black;
+}
+
 .home .site__main {
   align-items: center;
   justify-content: center;

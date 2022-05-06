@@ -11,7 +11,15 @@
     let elmImg = document.createElement('img');
     boite__carrousel.append(elmImg);
 
+    let index = 0;
     for(const img of galerie__img){
+        let bouton = document.createElement('button');
+        bouton.dataset.index = index++;
+        boite__carrousel__navigation.append(bouton);
+        bouton.addEventListener('mousedown', function(){
+            elmImg.setAttribute('src', galerie__img[this.dataset.index].getAttribute('src'))
+        })
+
         img.addEventListener('mousedown', function(){
             //console.log(this.parentNode.parentNode.className);
             boite__carrousel.classList.add("ouvrir");
