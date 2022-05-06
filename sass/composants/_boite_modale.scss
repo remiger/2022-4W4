@@ -1,0 +1,58 @@
+.boite__modale, .boite__carrousel{
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    border: 5px solid $color__boite__modale__bordure;
+    background-color: $color__boite__modale__fond;
+    transform: scale(0);
+    transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+    p{
+        text-align: justify;
+        padding: 10px;
+        color: $color__boite__modale__texte;
+    }
+
+    // Media queries pour mobile
+    @media screen and (max-width: $largeur__media-tablette){
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+
+    &__fermeture{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        z-index: 1;
+    }
+    // &__texte{
+
+    // }
+}
+
+.ouvrir{
+    transform: scale(1);
+}
+
+.boite__carrousel{
+    top: 12.5%;
+    left: 12.5%;
+    width: 75%;
+    height: 75%;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

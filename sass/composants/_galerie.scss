@@ -1,5 +1,8 @@
-.wp-block-gallery {
-        @media screen and (min-width:$largeur__media-tablette) {
+.galerie {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+        @media screen and (max-width:$largeur__media-tablette) {
             margin-right: 20px;
             width: 85%;
         }
