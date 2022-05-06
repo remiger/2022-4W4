@@ -1,5 +1,5 @@
 (function(){
-    let boite_carrousel = document.querySelector(".boite_carrousel");
+    let boite__carrousel = document.querySelector(".boite__carrousel");
     let boite__carrousel__navigation = document.querySelector(".boite__carrousel__navigation");
     let boite__carrousel__fermeture = document.querySelector(".boite__carrousel__fermeture");
     let galerie__img = document.querySelectorAll('.galerie img');
@@ -16,7 +16,7 @@
             //console.log(this.parentNode.parentNode.className);
             boite__carrousel.classList.add("ouvrir");
             //boite__carrousel__navigation.innerHTML = this.getAttribute('src');
-            elmImg.addAttribute('src', this.getAttribute('src'));
+            elmImg.setAttribute('src', this.getAttribute('src'));
         })
     }
 

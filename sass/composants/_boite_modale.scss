@@ -27,10 +27,15 @@
 
     &__fermeture{
         position: absolute;
+        border-radius: 20px;
+        color: $color__boite__modale__fermeture__x;
+        font-weight: bold;
+        font-size: 1.5rem;
+        background-color: $color__boite__modale__fermeture__bg;
         top: 10px;
-        left: 10px;
-        width: 30px;
-        height: 30px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
         z-index: 1;
     }
     // &__texte{
