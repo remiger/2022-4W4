@@ -15,7 +15,12 @@
                             array(), 
                             filemtime(get_template_directory() . '/javascript/carrousel.js'),
                             true); // true pour integrer le js en bas du document
-        if (is_category('cours')) {
+                            wp_register_script('cidw-4w4-boite-modale',
+                            get_template_directory_uri() . '/javascript/boite-modale.js',
+                            array(), 
+                            filemtime(get_template_directory() . '/javascript/boite-modale.js'),
+                            true); // true pour integrer le js en bas du document
+        if (!is_front_page()) {
             wp_enqueue_script('cidw-4w4-boite-modale');
         }
 

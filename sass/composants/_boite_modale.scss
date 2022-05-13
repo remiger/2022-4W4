@@ -11,10 +11,10 @@
 
     p{
         text-align: justify;
-        padding: 10px;
+        padding-bottom: 140px;
         color: $color__boite__modale__texte;
+        
     }
-
     // Media queries pour mobile
     @media screen and (max-width: $largeur__media-tablette){
         top: 0;
@@ -46,6 +46,19 @@
 .ouvrir{
     transform: scale(1);
 }
+
+.boite__modale.ouvrir{
+    overflow: hidden;
+
+    .boite__modale__texte{
+        width: 100%;
+        height: calc(100% - 50px);
+        overflow-y: scroll;
+        padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+        box-sizing: content-box; /* So the width will be 100% + 17px */
+    }
+}
+
 
 .boite__carrousel{
     top: 12.5%;

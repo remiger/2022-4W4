@@ -1,4 +1,4 @@
-# Exercice 3 4W4 2022 - Rémi Gervais
+# TP 2 4W4 2022 - Rémi Gervais
 
 ## Description du TP
 Développer un site constitué de plusieurs modèles qui permettront d’afficher dans un design original les pages suivantes :
@@ -33,4 +33,18 @@ o	Le titre du site
 o	La description
 o	Des icônes de liens
 o	Une zone de recherche
+
+### Un lien sera ajouté à la fin du résumé de l’article
+o	Ce lien permettra d’afficher la description complète de l’article dans une division apparaissant dynamiquement au milieu de la fenêtre. 
+o	Cette boîte modale sera animée 
+o	Permettra de faire défiler sans voir la barre de défilement « hide-scroll-bar-but-while-still-being-able-to-scroll »
+o	Un bouton «X» permettra de fermer la boîte modale
+o	Sur périphérique mobile la boîte modale prend tout l’espace du viewport
+
+
+o	Chacune des pages événements est conçue à partir d’un modèle de page « template-evenement » amélioré
+o	L’entête et le footer sont améliorés
+o	Un carrousel animé avec javascript/CSS. Ce carrousel pourra être intégré dans la page d’accueil ou dans toutes autres pages du site.
+o	Des fonctions de personnalisations devront être ajoutées dans l’admin « Personnaliser » 
+« Customizer Objects »
 
