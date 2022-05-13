@@ -1,5 +1,8 @@
 # TP 2 4W4 2022 - Rémi Gervais
 
+## Lien GitHub Pages
+https://remiger.github.io/2022-4W4/
+
 ## Description du TP
 Développer un site constitué de plusieurs modèles qui permettront d’afficher dans un design original les pages suivantes :
 
