@@ -1,9 +1,11 @@
-# TP 2 4W4 2022 - Rémi Gervais
+# Epreuve finale 4W4 2022 - Rémi Gervais
 
 ## Lien GitHub Pages
 https://remiger.github.io/2022-4W4/
 
-## Description du TP
+## Description de l'epreuve finale
+Ajout de 4 pages décrivant chacune un atelier de perfectionnement offert par le département
+Création d'une nouvelle structure de menu animé permettant d’accéder aux pages décrivant les ateliers
 Développer un site constitué de plusieurs modèles qui permettront d’afficher dans un design original les pages suivantes :
 
 ### Une page d’accueil personnalisée
