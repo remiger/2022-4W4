@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /**
-Theme name: 2022-4w4 TP #2 Remi Gervais
+Theme name: 2022-4w4 Epreuve Finale Remi Gervais
 Author: Rémi Gervais
 Author URI: https://github.com/remiger/2022-4W4/
-Description: TP2 dans le cadre du cours 4W4
+Description: Epreuve Finale dans le cadre du cours 4W4
 Version: 1.0
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
@@ -1291,12 +1291,21 @@ Navigation categorie cours
   color: #ebd447;
 }
 
+.site__main .atelier {
+  display: inline-block;
+}
+
 .principal {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   margin-left: 20px;
+}
+
+.principal h1 {
+  color: #141414;
+  text-shadow: 2px 2px white;
 }
 
 .erreur-404 h1 {
@@ -1416,7 +1425,8 @@ Navigation categorie cours
   flex-direction: column;
   align-items: center;
   font-size: clamp(1rem, 2vw, 2.2rem);
-  color: #ffe600;
+  color: black;
+  font-weight: bold;
   height: 100%;
   width: 100%;
   padding: 10px;
@@ -1434,8 +1444,52 @@ Navigation categorie cours
   margin-top: 10px;
 }
 
+.principal .menu-atelier-container .menu-item:nth-of-type(1) a {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=css");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.principal .menu-atelier-container .menu-item:nth-of-type(2) a {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=reactjs");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.principal .menu-atelier-container .menu-item:nth-of-type(3) a {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=html");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.principal .menu-atelier-container .menu-item:nth-of-type(4) a {
+  background-image: url("https://s2.svgbox.net/files.svg?ic=git");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.principal .menu-atelier-container .menu-item a:hover {
+  background-size: 50%;
+  transition: 0.4s;
+}
+
 .home {
   overflow-x: hidden;
+}
+
+.atelier__dureeseance,
+.atelier__datedebut,
+.atelier__datefin,
+.atelier__jourssemaine,
+.atelier__heuredebut,
+.atelier__heurefin,
+.atelier__animateur,
+.atelier__local {
+  font-weight: bold;
 }
 
 .boite__modale, .boite__carrousel {

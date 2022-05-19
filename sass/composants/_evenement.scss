@@ -1,9 +1,10 @@
-// .evenement{
-//     &__resume{
-
-//     }
-
-//     &__endroit{
-        
-//     }
-// }
+.atelier__dureeseance,
+.atelier__datedebut,
+.atelier__datefin,
+.atelier__jourssemaine,
+.atelier__heuredebut,
+.atelier__heurefin,
+.atelier__animateur,
+.atelier__local{
+    font-weight: bold;
+}
