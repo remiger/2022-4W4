@@ -563,22 +563,50 @@ ANIMATIONS
 }
 
 .menu-evenement-container .menu-item:nth-child(1) {
-  transform: translateX(calc(150vw*1));
+  transform: translateX(calc(135vw*1));
 }
 
 .menu-evenement-container .menu-item:nth-child(2) {
-  transform: translateX(calc(150vw*2));
+  transform: translateX(calc(135vw*2));
 }
 
 .menu-evenement-container .menu-item:nth-child(3) {
-  transform: translateX(calc(150vw*3));
+  transform: translateX(calc(135vw*3));
 }
 
 .menu-evenement-container .menu-item:nth-child(4) {
-  transform: translateX(calc(150vw*4));
+  transform: translateX(calc(135vw*4));
 }
 
 .menu-evenement-container .menu-item {
+  animation: anim_menu_2 1.5s 1s forwards;
+}
+
+@keyframes anim_menu_2 {
+  0% {
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menu-atelier-container .menu-item:nth-child(1) {
+  transform: translateX(calc(175vw*1));
+}
+
+.menu-atelier-container .menu-item:nth-child(2) {
+  transform: translateX(calc(175vw*2));
+}
+
+.menu-atelier-container .menu-item:nth-child(3) {
+  transform: translateX(calc(175vw*3));
+}
+
+.menu-atelier-container .menu-item:nth-child(4) {
+  transform: translateX(calc(175vw*4));
+}
+
+.menu-atelier-container .menu-item {
   animation: anim_menu_2 1.5s 1s forwards;
 }
 
@@ -1346,26 +1374,30 @@ Navigation categorie cours
 }
 
 .principal .menu-menu_accueil-container,
-.principal .menu-evenement-container {
+.principal .menu-evenement-container,
+.principal .menu-atelier-container {
   width: 100%;
   padding-right: 20px;
   margin-bottom: 30px;
 }
 
 .principal .menu-menu_accueil-container .menu,
-.principal .menu-evenement-container .menu {
+.principal .menu-evenement-container .menu,
+.principal .menu-atelier-container .menu {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .principal .menu-menu_accueil-container .menu hr,
-.principal .menu-evenement-container .menu hr {
+.principal .menu-evenement-container .menu hr,
+.principal .menu-atelier-container .menu hr {
   display: none;
 }
 
 .principal .menu-menu_accueil-container .menu .menu-item,
-.principal .menu-evenement-container .menu .menu-item {
+.principal .menu-evenement-container .menu .menu-item,
+.principal .menu-atelier-container .menu .menu-item {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1378,7 +1410,8 @@ Navigation categorie cours
 }
 
 .principal .menu-menu_accueil-container .menu .menu-item a,
-.principal .menu-evenement-container .menu .menu-item a {
+.principal .menu-evenement-container .menu .menu-item a,
+.principal .menu-atelier-container .menu .menu-item a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1390,12 +1423,14 @@ Navigation categorie cours
 }
 
 .principal .menu-menu_accueil-container .menu .menu-item a .menu-item-description,
-.principal .menu-evenement-container .menu .menu-item a .menu-item-description {
+.principal .menu-evenement-container .menu .menu-item a .menu-item-description,
+.principal .menu-atelier-container .menu .menu-item a .menu-item-description {
   font-size: clamp(0.8rem, 1.5vw, 1rem);
 }
 
 .principal .menu-menu_accueil-container .menu .menu-item-description,
-.principal .menu-evenement-container .menu .menu-item-description {
+.principal .menu-evenement-container .menu .menu-item-description,
+.principal .menu-atelier-container .menu .menu-item-description {
   margin-top: 10px;
 }
 

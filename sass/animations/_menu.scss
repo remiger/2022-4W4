@@ -25,7 +25,30 @@
     .menu{
         @for $i from 1 through 4 { 
             &-item:nth-child(#{$i}) {
-                transform: translateX(calc(150vw*#{$i}));
+                transform: translateX(calc(135vw*#{$i}));
+            }
+        }
+    
+        &-item{
+            animation: anim_menu_2 1.5s 1s forwards;
+        }
+    
+        @keyframes anim_menu_2{
+            0%{
+                
+            }
+            100%{
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+.menu-atelier-container{
+    .menu{
+        @for $i from 1 through 4 { 
+            &-item:nth-child(#{$i}) {
+                transform: translateX(calc(175vw*#{$i}));
             }
         }
     
