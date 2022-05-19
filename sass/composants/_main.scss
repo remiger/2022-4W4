@@ -48,7 +48,26 @@
     }
 
     .atelier{
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        h3{
+            margin-left: 13px;
+            font-size: clamp(0.8rem, 3vw, 1.9rem);
+        }
+        span{
+            display: flex;
+            margin-left: 30px;
+            margin-right: 30px;
+            p{
+                font-size: clamp(0.5rem, 3vw, 1.5rem);
+            }
+            
+        }
+
+
+        p{
+            padding: 0 1px 20px 4px;
+        }
     }
 }
 

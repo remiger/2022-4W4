@@ -1292,7 +1292,27 @@ Navigation categorie cours
 }
 
 .site__main .atelier {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+.site__main .atelier h3 {
+  margin-left: 13px;
+  font-size: clamp(0.8rem, 3vw, 1.9rem);
+}
+
+.site__main .atelier span {
+  display: flex;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.site__main .atelier span p {
+  font-size: clamp(0.5rem, 3vw, 1.5rem);
+}
+
+.site__main .atelier p {
+  padding: 0 1px 20px 4px;
 }
 
 .principal {
@@ -1411,16 +1431,18 @@ Navigation categorie cours
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-color: #155cdf;
+  background-image: linear-gradient(to bottom right, #0099ff, #006eff);
   flex: 0 0 20%;
   min-height: 100px;
   min-width: 20%;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .principal .menu-menu_accueil-container .menu .menu-item a,
 .principal .menu-evenement-container .menu .menu-item a,
 .principal .menu-atelier-container .menu .menu-item a {
+  transition: 0.2s;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1448,21 +1470,21 @@ Navigation categorie cours
   background-image: url("https://s2.svgbox.net/files.svg?ic=css");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: center;
 }
 
 .principal .menu-atelier-container .menu-item:nth-of-type(2) a {
   background-image: url("https://s2.svgbox.net/files.svg?ic=reactjs");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: center;
 }
 
 .principal .menu-atelier-container .menu-item:nth-of-type(3) a {
   background-image: url("https://s2.svgbox.net/files.svg?ic=html");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: bottom;
+  background-position: center;
 }
 
 .principal .menu-atelier-container .menu-item:nth-of-type(4) a {
@@ -1473,8 +1495,19 @@ Navigation categorie cours
 }
 
 .principal .menu-atelier-container .menu-item a:hover {
-  background-size: 50%;
-  transition: 0.4s;
+  animation-name: iconesmenu;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transition: 0.2s;
+}
+
+@keyframes iconesmenu {
+  0% {
+    background-size: 20%;
+  }
+  100% {
+    background-size: 50%;
+  }
 }
 
 .home {

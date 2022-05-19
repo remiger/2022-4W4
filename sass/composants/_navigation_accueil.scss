@@ -20,13 +20,15 @@
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                background-color: $color__bouton__background;
+                background-image: linear-gradient(to bottom right, rgb(0, 153, 255), rgb(0, 110, 255));
                 flex : 0 0 20%;
                 min-height : 100px;
                 min-width: 20%;
-                border-radius: 5px;
+                border-radius: 10px;
 
                 a{
+                    transition: 0.2s;
+                    border-radius: 10px;
                     display : flex;
                     flex-direction: column;
                     align-items: center;
@@ -54,19 +56,19 @@
             background-image: url('https://s2.svgbox.net/files.svg?ic=css');
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: bottom;
+            background-position: center;
         }
         .menu-item:nth-of-type(2) a{
             background-image: url('https://s2.svgbox.net/files.svg?ic=reactjs');
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: bottom;
+            background-position: center;
         }
         .menu-item:nth-of-type(3) a{
             background-image: url('https://s2.svgbox.net/files.svg?ic=html');
             background-repeat: no-repeat;
             background-size: contain;
-            background-position: bottom;
+            background-position: center;
         }
         .menu-item:nth-of-type(4) a{
             background-image: url('https://s2.svgbox.net/files.svg?ic=git');
@@ -75,9 +77,20 @@
             background-position: center;
         }
         .menu-item a:hover{
-            background-size: 50%;
-            transition: 0.4s;
+            animation-name: iconesmenu;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            transition: 0.2s;
         }
+    }
+}
+
+@keyframes iconesmenu {
+    0%{
+        background-size: 20%;
+    }
+    100%{
+        background-size: 50%;
     }
 }
 
